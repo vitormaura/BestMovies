@@ -13,6 +13,7 @@
 		E7EFCADE21B6AE5100ECED0B /* Best_Movies.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E7EFCADC21B6AE5100ECED0B /* Best_Movies.xcdatamodeld */; };
 		E7EFCAE021B6AE5200ECED0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7EFCADF21B6AE5200ECED0B /* Assets.xcassets */; };
 		E7EFCAE321B6AE5200ECED0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7EFCAE121B6AE5200ECED0B /* LaunchScreen.storyboard */; };
+		E7EFCAEB21B6AF7900ECED0B /* SLMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EFCAEA21B6AF7900ECED0B /* SLMain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		E7EFCADF21B6AE5200ECED0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E7EFCAE221B6AE5200ECED0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E7EFCAE421B6AE5200ECED0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7EFCAEA21B6AF7900ECED0B /* SLMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLMain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				E7EFCAD521B6AE5100ECED0B /* AppDelegate.swift */,
+				E7EFCAEA21B6AF7900ECED0B /* SLMain.swift */,
 				E7EFCAD721B6AE5100ECED0B /* ViewController.swift */,
 				E7EFCAD921B6AE5100ECED0B /* Main.storyboard */,
 				E7EFCADF21B6AE5200ECED0B /* Assets.xcassets */,
@@ -141,6 +144,7 @@
 				E7EFCAD821B6AE5100ECED0B /* ViewController.swift in Sources */,
 				E7EFCADE21B6AE5100ECED0B /* Best_Movies.xcdatamodeld in Sources */,
 				E7EFCAD621B6AE5100ECED0B /* AppDelegate.swift in Sources */,
+				E7EFCAEB21B6AF7900ECED0B /* SLMain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
