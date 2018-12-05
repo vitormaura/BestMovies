@@ -4,5 +4,6 @@ target 'Best Movies' do
   pod 'Alamofire'
   pod 'Kingfisher'
   pod "Spruce"
+  pod 'lottie-ios'
 
 end

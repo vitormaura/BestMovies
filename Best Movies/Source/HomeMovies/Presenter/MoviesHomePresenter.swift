@@ -12,6 +12,7 @@ import UIKit
 protocol HomeMovieDelegate: NSObjectProtocol{
     func startLoading()
     func stopLoading()
+    func errorConnection()
     func setMovie(_ viewData: HomeMovieViewData)
 }
 
@@ -41,6 +42,7 @@ extension MoviesHomePresenter{
     func getMovies(){
         self.delegate.startLoading()
         if !Reachability.isConnectedToNetwork() {
+            self.delegate.errorConnection()
             print("error")
             return
         }
@@ -53,6 +55,7 @@ extension MoviesHomePresenter{
                 }
             }
         }) { (error) in
+            //self.delegate.stopLoading()
             print("error")
         }
     }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1000"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9C194B59DD80FE99B50C0E9F3E03A1A7"
+               BlueprintIdentifier = "F4C1C9E55492E4B2F87447BCE5982293"
                BuildableName = "Pods_Best_Movies.framework"
                BlueprintName = "Pods-Best Movies"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9C194B59DD80FE99B50C0E9F3E03A1A7"
+            BlueprintIdentifier = "F4C1C9E55492E4B2F87447BCE5982293"
             BuildableName = "Pods_Best_Movies.framework"
             BlueprintName = "Pods-Best Movies"
             ReferencedContainer = "container:Pods.xcodeproj">

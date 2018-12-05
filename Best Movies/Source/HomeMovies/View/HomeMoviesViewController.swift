@@ -8,10 +8,11 @@
 
 import UIKit
 import Spruce
-
+import Lottie
 
 class HomeMoviesViewController: UIViewController {
     
+    @IBOutlet weak var loadingView: LOTAnimationView!
     @IBOutlet weak var moviesCollectionView: UICollectionView!
     private var viewData:HomeMovieViewData!
     private var presenter:MoviesHomePresenter!
@@ -26,7 +27,7 @@ class HomeMoviesViewController: UIViewController {
 
 extension HomeMoviesViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return isLoading ? 10 : viewData.movieList.count
+        return isLoading ? 1 : viewData.movieList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -43,11 +44,33 @@ extension HomeMoviesViewController: UICollectionViewDataSource{
 
 extension HomeMoviesViewController: HomeMovieDelegate {
     func startLoading() {
-        self.isLoading = true
+        UIView.animate(withDuration: 0.2) {
+            self.isLoading = true
+            self.loadingView.isHidden = false
+            self.moviesCollectionView.isHidden = true
+            self.loadingView.setAnimation(named: "video_cam")
+            self.loadingView.play()
+            self.loadingView.loopAnimation = true
+        }
     }
     
     func stopLoading() {
-        self.isLoading = false
+        UIView.animate(withDuration: 0.2) {
+            self.isLoading = false
+            self.loadingView.isHidden = true
+            self.moviesCollectionView.isHidden = false
+            self.loadingView.pause()
+        }
+    }
+    
+    func errorConnection(){
+        UIView.animate(withDuration: 0.2) {
+            self.loadingView.isHidden = false
+            self.moviesCollectionView.isHidden = true
+            self.loadingView.setAnimation(named: "no_connection")
+            self.loadingView.play()
+            self.loadingView.loopAnimation = true
+        }
     }
     
     func setMovie(_ viewData: HomeMovieViewData) {

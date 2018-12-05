@@ -10,6 +10,9 @@
 		D7948239E2D7B8D5D62D51DA /* Pods_Best_Movies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9848ED0AF2D53548EAC0EB00 /* Pods_Best_Movies.framework */; };
 		E7E7B66221B80F3700072C38 /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E7B66121B80F3700072C38 /* MovieCollectionViewCell.swift */; };
 		E7E7B66421B815F300072C38 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E7B66321B815F300072C38 /* Reachability.swift */; };
+		E7E7B66621B85C5900072C38 /* video_cam.json in Resources */ = {isa = PBXBuildFile; fileRef = E7E7B66521B85C5900072C38 /* video_cam.json */; };
+		E7E7B66821B8609500072C38 /* no_connection.json in Resources */ = {isa = PBXBuildFile; fileRef = E7E7B66721B8609500072C38 /* no_connection.json */; };
+		E7E7B66A21B8635100072C38 /* movie_loading.json in Resources */ = {isa = PBXBuildFile; fileRef = E7E7B66921B8635100072C38 /* movie_loading.json */; };
 		E7EFCAD621B6AE5100ECED0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EFCAD521B6AE5100ECED0B /* AppDelegate.swift */; };
 		E7EFCADB21B6AE5100ECED0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7EFCAD921B6AE5100ECED0B /* Main.storyboard */; };
 		E7EFCADE21B6AE5100ECED0B /* Best_Movies.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E7EFCADC21B6AE5100ECED0B /* Best_Movies.xcdatamodeld */; };
@@ -28,6 +31,9 @@
 		9848ED0AF2D53548EAC0EB00 /* Pods_Best_Movies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Best_Movies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7E7B66121B80F3700072C38 /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
 		E7E7B66321B815F300072C38 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		E7E7B66521B85C5900072C38 /* video_cam.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = video_cam.json; sourceTree = "<group>"; };
+		E7E7B66721B8609500072C38 /* no_connection.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = no_connection.json; sourceTree = "<group>"; };
+		E7E7B66921B8635100072C38 /* movie_loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = movie_loading.json; sourceTree = "<group>"; };
 		E7EFCAD221B6AE5000ECED0B /* Best Movies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Best Movies.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7EFCAD521B6AE5100ECED0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7EFCADA21B6AE5100ECED0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -151,6 +157,9 @@
 		E7EFCAF421B6F5E600ECED0B /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				E7E7B66921B8635100072C38 /* movie_loading.json */,
+				E7E7B66721B8609500072C38 /* no_connection.json */,
+				E7E7B66521B85C5900072C38 /* video_cam.json */,
 				E7EFCADF21B6AE5200ECED0B /* Assets.xcassets */,
 				E7EFCAFE21B7026200ECED0B /* Info.plist */,
 			);
@@ -269,6 +278,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7EFCAE321B6AE5200ECED0B /* LaunchScreen.storyboard in Resources */,
+				E7E7B66621B85C5900072C38 /* video_cam.json in Resources */,
+				E7E7B66821B8609500072C38 /* no_connection.json in Resources */,
+				E7E7B66A21B8635100072C38 /* movie_loading.json in Resources */,
 				E7EFCAE021B6AE5200ECED0B /* Assets.xcassets in Resources */,
 				E7EFCADB21B6AE5100ECED0B /* Main.storyboard in Resources */,
 			);
@@ -287,12 +299,14 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Spruce/Spruce.framework",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Spruce.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
