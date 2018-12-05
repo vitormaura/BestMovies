@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bLO-XA-ej7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bLO-XA-ej7">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -58,7 +58,7 @@
                                     <inset key="sectionInset" minX="4" minY="20" maxX="4" maxY="20"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="o0u-3y-pu8">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="o0u-3y-pu8" customClass="MovieCollectionViewCell" customModule="Best_Movies" customModuleProvider="target">
                                         <rect key="frame" x="12" y="28" width="190" height="403"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -66,8 +66,19 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Zb-IS-Old">
-                                                    <rect key="frame" x="5" y="6" width="180" height="304"/>
+                                                    <rect key="frame" x="5" y="6" width="180" height="293"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rge-sK-318">
+                                                            <rect key="frame" x="0.0" y="0.0" width="180" height="293"/>
+                                                        </imageView>
+                                                    </subviews>
                                                     <color key="backgroundColor" red="0.0390625" green="0.5218963566" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="Rge-sK-318" secondAttribute="bottom" id="ODj-JA-tcH"/>
+                                                        <constraint firstItem="Rge-sK-318" firstAttribute="top" secondItem="7Zb-IS-Old" secondAttribute="top" id="ccA-b8-dAh"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Rge-sK-318" secondAttribute="trailing" id="rxw-zG-sk2"/>
+                                                        <constraint firstItem="Rge-sK-318" firstAttribute="leading" secondItem="7Zb-IS-Old" secondAttribute="leading" id="tx3-sO-2tg"/>
+                                                    </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
                                                             <real key="value" value="1"/>
@@ -86,7 +97,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XC6-ji-JrT">
                                                     <rect key="frame" x="5" y="329" width="180" height="59"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filme" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mZz-pQ-Q4y">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filme" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mZz-pQ-Q4y">
                                                             <rect key="frame" x="8" y="8" width="164" height="43"/>
                                                             <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="15"/>
                                                             <nil key="highlightedColor"/>
@@ -124,8 +135,12 @@
                                             <constraint firstAttribute="trailing" secondItem="XC6-ji-JrT" secondAttribute="trailing" constant="5" id="Tyk-MB-NcQ"/>
                                             <constraint firstItem="XC6-ji-JrT" firstAttribute="leading" secondItem="o0u-3y-pu8" secondAttribute="leading" constant="5" id="ZNf-se-chb"/>
                                             <constraint firstItem="7Zb-IS-Old" firstAttribute="leading" secondItem="o0u-3y-pu8" secondAttribute="leading" constant="5" id="aR2-JP-ClH"/>
-                                            <constraint firstItem="XC6-ji-JrT" firstAttribute="top" secondItem="7Zb-IS-Old" secondAttribute="bottom" constant="19" id="qXe-Pq-4FZ"/>
+                                            <constraint firstItem="XC6-ji-JrT" firstAttribute="top" secondItem="7Zb-IS-Old" secondAttribute="bottom" constant="30" id="qXe-Pq-4FZ"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="imageMovie" destination="Rge-sK-318" id="4c3-2s-tcu"/>
+                                            <outlet property="labelTitleMovie" destination="mZz-pQ-Q4y" id="jk2-ZO-3ri"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -144,6 +159,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="mostViewed" id="ccj-RP-A53"/>
                     <navigationItem key="navigationItem" id="ilJ-t3-imt"/>
+                    <connections>
+                        <outlet property="moviesCollectionView" destination="A3K-08-dA2" id="wxL-Cp-FQW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D7948239E2D7B8D5D62D51DA /* Pods_Best_Movies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9848ED0AF2D53548EAC0EB00 /* Pods_Best_Movies.framework */; };
+		E7E7B66221B80F3700072C38 /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E7B66121B80F3700072C38 /* MovieCollectionViewCell.swift */; };
+		E7E7B66421B815F300072C38 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E7B66321B815F300072C38 /* Reachability.swift */; };
 		E7EFCAD621B6AE5100ECED0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EFCAD521B6AE5100ECED0B /* AppDelegate.swift */; };
 		E7EFCADB21B6AE5100ECED0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7EFCAD921B6AE5100ECED0B /* Main.storyboard */; };
 		E7EFCADE21B6AE5100ECED0B /* Best_Movies.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E7EFCADC21B6AE5100ECED0B /* Best_Movies.xcdatamodeld */; };
@@ -24,6 +26,8 @@
 /* Begin PBXFileReference section */
 		629ABFFEDDEB5A249B99E3F3 /* Pods-Best Movies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Best Movies.release.xcconfig"; path = "Pods/Target Support Files/Pods-Best Movies/Pods-Best Movies.release.xcconfig"; sourceTree = "<group>"; };
 		9848ED0AF2D53548EAC0EB00 /* Pods_Best_Movies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Best_Movies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7E7B66121B80F3700072C38 /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
+		E7E7B66321B815F300072C38 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		E7EFCAD221B6AE5000ECED0B /* Best Movies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Best Movies.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7EFCAD521B6AE5100ECED0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7EFCADA21B6AE5100ECED0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -67,6 +71,14 @@
 				9848ED0AF2D53548EAC0EB00 /* Pods_Best_Movies.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E7E7B66021B80F1A00072C38 /* MovieCell */ = {
+			isa = PBXGroup;
+			children = (
+				E7E7B66121B80F3700072C38 /* MovieCollectionViewCell.swift */,
+			);
+			path = MovieCell;
 			sourceTree = "<group>";
 		};
 		E7EFCAC921B6AE5000ECED0B = {
@@ -114,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				E7EFCAEE21B6DED900ECED0B /* ErrorService.swift */,
+				E7E7B66321B815F300072C38 /* Reachability.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -130,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				E7EFCAF721B6F6A000ECED0B /* HomeMovies */,
+				E7E7B66021B80F1A00072C38 /* MovieCell */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -316,7 +330,9 @@
 				E7EFCB0321B76DDD00ECED0B /* ExtensionUIView.swift in Sources */,
 				E7EFCAF221B6E36600ECED0B /* PopularMovies.swift in Sources */,
 				E7EFCADE21B6AE5100ECED0B /* Best_Movies.xcdatamodeld in Sources */,
+				E7E7B66221B80F3700072C38 /* MovieCollectionViewCell.swift in Sources */,
 				E7EFCAD621B6AE5100ECED0B /* AppDelegate.swift in Sources */,
+				E7E7B66421B815F300072C38 /* Reachability.swift in Sources */,
 				E7EFCAEB21B6AF7900ECED0B /* SLMain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
