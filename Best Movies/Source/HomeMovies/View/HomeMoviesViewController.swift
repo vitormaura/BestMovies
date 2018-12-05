@@ -73,6 +73,16 @@ extension HomeMoviesViewController: HomeMovieDelegate {
         }
     }
     
+    func errorGeneric(){
+        UIView.animate(withDuration: 0.2) {
+            self.loadingView.isHidden = false
+            self.moviesCollectionView.isHidden = true
+            self.loadingView.setAnimation(named: "search")
+            self.loadingView.play()
+            self.loadingView.loopAnimation = true
+        }
+    }
+    
     func setMovie(_ viewData: HomeMovieViewData) {
         self.viewData = viewData
         self.moviesCollectionView.reloadData()

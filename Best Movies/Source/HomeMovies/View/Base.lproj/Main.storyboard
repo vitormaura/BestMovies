@@ -59,28 +59,52 @@
                                 <rect key="frame" x="0.0" y="140" width="414" height="673"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="25" minimumInteritemSpacing="10" sectionInsetReference="layoutMargins" id="At1-gN-SUQ">
-                                    <size key="itemSize" width="190" height="403"/>
+                                    <size key="itemSize" width="190" height="366"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="4" minY="20" maxX="4" maxY="20"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="o0u-3y-pu8" customClass="MovieCollectionViewCell" customModule="Best_Movies" customModuleProvider="target">
-                                        <rect key="frame" x="12" y="28" width="190" height="403"/>
+                                        <rect key="frame" x="12" y="28" width="190" height="366"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="190" height="403"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="190" height="366"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Zb-IS-Old">
-                                                    <rect key="frame" x="5" y="6" width="180" height="293"/>
+                                                    <rect key="frame" x="5" y="6" width="180" height="289"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rge-sK-318">
-                                                            <rect key="frame" x="0.0" y="0.0" width="180" height="293"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="180" height="289"/>
                                                         </imageView>
+                                                        <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jhq-ED-Ssq">
+                                                            <rect key="frame" x="143" y="13" width="25" height="25"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="25" id="56t-d3-8Uu"/>
+                                                                <constraint firstAttribute="width" constant="25" id="6gE-gO-kOT"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                                    <real key="value" value="1"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                                    <size key="value" width="0.0" height="4"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                                    <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                                    <real key="value" value="0.20000000000000001"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.0390625" green="0.5218963566" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="jhq-ED-Ssq" secondAttribute="trailing" constant="12" id="Ha6-SW-M1w"/>
+                                                        <constraint firstItem="jhq-ED-Ssq" firstAttribute="top" secondItem="7Zb-IS-Old" secondAttribute="top" constant="13" id="LQF-JR-adS"/>
                                                         <constraint firstAttribute="bottom" secondItem="Rge-sK-318" secondAttribute="bottom" id="ODj-JA-tcH"/>
                                                         <constraint firstItem="Rge-sK-318" firstAttribute="top" secondItem="7Zb-IS-Old" secondAttribute="top" id="ccA-b8-dAh"/>
                                                         <constraint firstAttribute="trailing" secondItem="Rge-sK-318" secondAttribute="trailing" id="rxw-zG-sk2"/>
@@ -102,10 +126,10 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XC6-ji-JrT">
-                                                    <rect key="frame" x="5" y="329" width="180" height="59"/>
+                                                    <rect key="frame" x="5" y="300" width="180" height="60"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filme" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mZz-pQ-Q4y">
-                                                            <rect key="frame" x="8" y="8" width="164" height="43"/>
+                                                            <rect key="frame" x="8" y="8" width="164" height="44"/>
                                                             <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="15"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -137,12 +161,12 @@
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="7Zb-IS-Old" secondAttribute="trailing" constant="5" id="1vb-Hz-cMr"/>
                                             <constraint firstItem="7Zb-IS-Old" firstAttribute="top" secondItem="o0u-3y-pu8" secondAttribute="top" constant="6" id="JvU-Hi-arb"/>
-                                            <constraint firstAttribute="bottom" secondItem="XC6-ji-JrT" secondAttribute="bottom" constant="15" id="MI2-7G-24p"/>
-                                            <constraint firstItem="XC6-ji-JrT" firstAttribute="top" secondItem="o0u-3y-pu8" secondAttribute="top" constant="329" id="MV1-k0-95i"/>
+                                            <constraint firstAttribute="bottom" secondItem="XC6-ji-JrT" secondAttribute="bottom" constant="6" id="MI2-7G-24p"/>
+                                            <constraint firstItem="XC6-ji-JrT" firstAttribute="top" secondItem="o0u-3y-pu8" secondAttribute="top" constant="300" id="MV1-k0-95i"/>
                                             <constraint firstAttribute="trailing" secondItem="XC6-ji-JrT" secondAttribute="trailing" constant="5" id="Tyk-MB-NcQ"/>
                                             <constraint firstItem="XC6-ji-JrT" firstAttribute="leading" secondItem="o0u-3y-pu8" secondAttribute="leading" constant="5" id="ZNf-se-chb"/>
                                             <constraint firstItem="7Zb-IS-Old" firstAttribute="leading" secondItem="o0u-3y-pu8" secondAttribute="leading" constant="5" id="aR2-JP-ClH"/>
-                                            <constraint firstItem="XC6-ji-JrT" firstAttribute="top" secondItem="7Zb-IS-Old" secondAttribute="bottom" constant="30" id="qXe-Pq-4FZ"/>
+                                            <constraint firstItem="XC6-ji-JrT" firstAttribute="top" secondItem="7Zb-IS-Old" secondAttribute="bottom" constant="5" id="qXe-Pq-4FZ"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="imageMovie" destination="Rge-sK-318" id="4c3-2s-tcu"/>

@@ -12,7 +12,7 @@
 		E7E7B66421B815F300072C38 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E7B66321B815F300072C38 /* Reachability.swift */; };
 		E7E7B66621B85C5900072C38 /* video_cam.json in Resources */ = {isa = PBXBuildFile; fileRef = E7E7B66521B85C5900072C38 /* video_cam.json */; };
 		E7E7B66821B8609500072C38 /* no_connection.json in Resources */ = {isa = PBXBuildFile; fileRef = E7E7B66721B8609500072C38 /* no_connection.json */; };
-		E7E7B66A21B8635100072C38 /* movie_loading.json in Resources */ = {isa = PBXBuildFile; fileRef = E7E7B66921B8635100072C38 /* movie_loading.json */; };
+		E7E7B66E21B8775300072C38 /* search.json in Resources */ = {isa = PBXBuildFile; fileRef = E7E7B66D21B8775300072C38 /* search.json */; };
 		E7EFCAD621B6AE5100ECED0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EFCAD521B6AE5100ECED0B /* AppDelegate.swift */; };
 		E7EFCADB21B6AE5100ECED0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7EFCAD921B6AE5100ECED0B /* Main.storyboard */; };
 		E7EFCADE21B6AE5100ECED0B /* Best_Movies.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E7EFCADC21B6AE5100ECED0B /* Best_Movies.xcdatamodeld */; };
@@ -33,7 +33,7 @@
 		E7E7B66321B815F300072C38 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		E7E7B66521B85C5900072C38 /* video_cam.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = video_cam.json; sourceTree = "<group>"; };
 		E7E7B66721B8609500072C38 /* no_connection.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = no_connection.json; sourceTree = "<group>"; };
-		E7E7B66921B8635100072C38 /* movie_loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = movie_loading.json; sourceTree = "<group>"; };
+		E7E7B66D21B8775300072C38 /* search.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = search.json; sourceTree = "<group>"; };
 		E7EFCAD221B6AE5000ECED0B /* Best Movies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Best Movies.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7EFCAD521B6AE5100ECED0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7EFCADA21B6AE5100ECED0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -157,7 +157,7 @@
 		E7EFCAF421B6F5E600ECED0B /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				E7E7B66921B8635100072C38 /* movie_loading.json */,
+				E7E7B66D21B8775300072C38 /* search.json */,
 				E7E7B66721B8609500072C38 /* no_connection.json */,
 				E7E7B66521B85C5900072C38 /* video_cam.json */,
 				E7EFCADF21B6AE5200ECED0B /* Assets.xcassets */,
@@ -280,7 +280,7 @@
 				E7EFCAE321B6AE5200ECED0B /* LaunchScreen.storyboard in Resources */,
 				E7E7B66621B85C5900072C38 /* video_cam.json in Resources */,
 				E7E7B66821B8609500072C38 /* no_connection.json in Resources */,
-				E7E7B66A21B8635100072C38 /* movie_loading.json in Resources */,
+				E7E7B66E21B8775300072C38 /* search.json in Resources */,
 				E7EFCAE021B6AE5200ECED0B /* Assets.xcassets in Resources */,
 				E7EFCADB21B6AE5100ECED0B /* Main.storyboard in Resources */,
 			);

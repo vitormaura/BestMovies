@@ -27,8 +27,7 @@ extension MovieCollectionViewCell {
         self.startLoading()
         if let url:URL = URL(string: url){
             let resource = ImageResource(downloadURL: url, cacheKey: name)
-            imageView.kf.setImage(with: resource, options: nil, completionHandler: {
-                (image, _, _, _) in
+            imageView.kf.setImage(with: resource, options: nil, completionHandler: { (image, _, _, _) in
                 DispatchQueue.main.async(execute: {
                     self.stopLoading()
                     if let imageResult = image {
@@ -45,18 +44,18 @@ extension MovieCollectionViewCell {
     }
     
     private func getImageDefault() -> UIImage{
-        if let image = UIImage(named: "avatar-default"){
+        if let image = UIImage(named: "cover-default"){
             return image
         }
         return UIImage()
     }
     
     func startLoading(){
-        print("1")
+        //
     }
     
     func stopLoading(){
-        print("2")
+        //
     }
 }
 

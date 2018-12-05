@@ -13,6 +13,7 @@ protocol HomeMovieDelegate: NSObjectProtocol{
     func startLoading()
     func stopLoading()
     func errorConnection()
+    func errorGeneric()
     func setMovie(_ viewData: HomeMovieViewData)
 }
 
@@ -43,20 +44,24 @@ extension MoviesHomePresenter{
         self.delegate.startLoading()
         if !Reachability.isConnectedToNetwork() {
             self.delegate.errorConnection()
-            print("error")
             return
         }
         self.service.getMovies(completionSuccess: { (movies) in
             DispatchQueue.main.async{
-                if let moviesList = movies.results {
-                    self.parseModelToViewData(moviesList)
-                    self.delegate.setMovie(self.viewData)
-                    self.delegate.stopLoading()
-                }
+                Timer.scheduledTimer(withTimeInterval: 5, repeats: false, block: { (_) in
+                    UIView.animate(withDuration: 0.5, animations: {
+                        if let moviesList = movies.results {
+                            self.parseModelToViewData(moviesList)
+                            self.delegate.setMovie(self.viewData)
+                            self.delegate.stopLoading()
+                        }
+                    })
+                })
             }
         }) { (error) in
-            //self.delegate.stopLoading()
-            print("error")
+            DispatchQueue.main.async{
+                self.delegate.errorGeneric()
+            }
         }
     }
 }
