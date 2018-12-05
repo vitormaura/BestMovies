@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bLO-XA-ej7">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="FQY-kV-mqP">
+            <objects>
+                <navigationController id="bLO-XA-ej7" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="5XA-Ey-MPl">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                <real key="value" value="0.20000000000000001"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                <size key="value" width="0.0" height="2"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="TNu-2u-WgL" kind="relationship" relationship="rootViewController" id="O5X-cn-Apu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nUP-td-0Os" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1833" y="-351"/>
+        </scene>
+        <!--Home Movies View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HomeMoviesViewController" customModule="Best_Movies" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="A3K-08-dA2">
+                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="25" minimumInteritemSpacing="10" sectionInsetReference="layoutMargins" id="At1-gN-SUQ">
+                                    <size key="itemSize" width="190" height="403"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="4" minY="20" maxX="4" maxY="20"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="o0u-3y-pu8">
+                                        <rect key="frame" x="12" y="28" width="190" height="403"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="190" height="403"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Zb-IS-Old">
+                                                    <rect key="frame" x="5" y="6" width="180" height="304"/>
+                                                    <color key="backgroundColor" red="0.0390625" green="0.5218963566" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                            <real key="value" value="0.20000000000000001"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                            <size key="value" width="0.0" height="4"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XC6-ji-JrT">
+                                                    <rect key="frame" x="5" y="329" width="180" height="59"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filme" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mZz-pQ-Q4y">
+                                                            <rect key="frame" x="8" y="8" width="164" height="43"/>
+                                                            <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="15"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.96397791749934858" green="0.96397791749934858" blue="0.96397791749934858" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="mZz-pQ-Q4y" firstAttribute="trailing" secondItem="XC6-ji-JrT" secondAttribute="trailingMargin" id="BOn-10-Dkl"/>
+                                                        <constraint firstItem="mZz-pQ-Q4y" firstAttribute="leading" secondItem="XC6-ji-JrT" secondAttribute="leadingMargin" id="DyO-9I-cq2"/>
+                                                        <constraint firstItem="mZz-pQ-Q4y" firstAttribute="bottom" secondItem="XC6-ji-JrT" secondAttribute="bottomMargin" id="VdT-72-tgF"/>
+                                                        <constraint firstItem="mZz-pQ-Q4y" firstAttribute="top" secondItem="XC6-ji-JrT" secondAttribute="topMargin" id="pom-g3-77l"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                            <real key="value" value="0.20000000000000001"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                            <size key="value" width="0.0" height="4"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="7Zb-IS-Old" secondAttribute="trailing" constant="5" id="1vb-Hz-cMr"/>
+                                            <constraint firstItem="7Zb-IS-Old" firstAttribute="top" secondItem="o0u-3y-pu8" secondAttribute="top" constant="6" id="JvU-Hi-arb"/>
+                                            <constraint firstAttribute="bottom" secondItem="XC6-ji-JrT" secondAttribute="bottom" constant="15" id="MI2-7G-24p"/>
+                                            <constraint firstItem="XC6-ji-JrT" firstAttribute="top" secondItem="o0u-3y-pu8" secondAttribute="top" constant="329" id="MV1-k0-95i"/>
+                                            <constraint firstAttribute="trailing" secondItem="XC6-ji-JrT" secondAttribute="trailing" constant="5" id="Tyk-MB-NcQ"/>
+                                            <constraint firstItem="XC6-ji-JrT" firstAttribute="leading" secondItem="o0u-3y-pu8" secondAttribute="leading" constant="5" id="ZNf-se-chb"/>
+                                            <constraint firstItem="7Zb-IS-Old" firstAttribute="leading" secondItem="o0u-3y-pu8" secondAttribute="leading" constant="5" id="aR2-JP-ClH"/>
+                                            <constraint firstItem="XC6-ji-JrT" firstAttribute="top" secondItem="7Zb-IS-Old" secondAttribute="bottom" constant="19" id="qXe-Pq-4FZ"/>
+                                        </constraints>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Wu3-mj-cZq"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="A3K-08-dA2" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="1fs-zr-tSI"/>
+                            <constraint firstItem="A3K-08-dA2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="77c-hP-b7m"/>
+                            <constraint firstItem="A3K-08-dA2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ObZ-st-7KQ"/>
+                            <constraint firstItem="A3K-08-dA2" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Sk0-nO-SzE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="mostViewed" id="ccj-RP-A53"/>
+                    <navigationItem key="navigationItem" id="ilJ-t3-imt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-27.536231884057973" y="-701.78571428571422"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="NyP-Pm-dw2">
+            <objects>
+                <viewController id="aXi-Oh-fb3" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j7w-3U-cT6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Gih-jY-0WA"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="Ji4-bD-Htv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JdT-uT-HyM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-26" y="-2"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Sda-Fn-7de">
+            <objects>
+                <tabBarController id="TNu-2u-WgL" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="L5a-Gd-WMM"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="L74-ZP-tkA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.0390625" green="0.5218963566" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="YUf-7l-hlD"/>
+                        <segue destination="aXi-Oh-fb3" kind="relationship" relationship="viewControllers" id="ecL-1b-oAQ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yf4-uP-Dg5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-975" y="-351"/>
+        </scene>
+    </scenes>
+</document>
