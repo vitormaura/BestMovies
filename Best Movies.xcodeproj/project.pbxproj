@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D7948239E2D7B8D5D62D51DA /* Pods_Best_Movies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9848ED0AF2D53548EAC0EB00 /* Pods_Best_Movies.framework */; };
+		BDD41D8284EF93221A47421F /* Pods_Best_Movies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBDF55B62F8131C1D866F41F /* Pods_Best_Movies.framework */; };
 		E7E3B66421B8BF0100DCF2B3 /* BEBAS___.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E7E3B66321B8BF0100DCF2B3 /* BEBAS___.ttf */; };
 		E7E3B67021B8BFB400DCF2B3 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E7E3B66521B8BFB200DCF2B3 /* Lato-Light.ttf */; };
 		E7E3B67121B8BFB400DCF2B3 /* Lato-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E7E3B66621B8BFB200DCF2B3 /* Lato-BlackItalic.ttf */; };
@@ -40,8 +40,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		629ABFFEDDEB5A249B99E3F3 /* Pods-Best Movies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Best Movies.release.xcconfig"; path = "Pods/Target Support Files/Pods-Best Movies/Pods-Best Movies.release.xcconfig"; sourceTree = "<group>"; };
-		9848ED0AF2D53548EAC0EB00 /* Pods_Best_Movies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Best_Movies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		72ACE08CD784B2F015591627 /* Pods-Best Movies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Best Movies.release.xcconfig"; path = "Pods/Target Support Files/Pods-Best Movies/Pods-Best Movies.release.xcconfig"; sourceTree = "<group>"; };
+		B9C36673E046BCE6F952F19C /* Pods-Best Movies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Best Movies.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Best Movies/Pods-Best Movies.debug.xcconfig"; sourceTree = "<group>"; };
+		DBDF55B62F8131C1D866F41F /* Pods_Best_Movies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Best_Movies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7E3B66321B8BF0100DCF2B3 /* BEBAS___.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BEBAS___.ttf"; sourceTree = "<group>"; };
 		E7E3B66521B8BFB200DCF2B3 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
 		E7E3B66621B8BFB200DCF2B3 /* Lato-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BlackItalic.ttf"; sourceTree = "<group>"; };
@@ -73,7 +74,6 @@
 		E7EFCAFE21B7026200ECED0B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7EFCB0221B76DDD00ECED0B /* ExtensionUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIView.swift; sourceTree = "<group>"; };
 		E7EFCB0621B7806800ECED0B /* MoviesHomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesHomePresenter.swift; sourceTree = "<group>"; };
-		EBDE4130F25CC6196B9C1B5A /* Pods-Best Movies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Best Movies.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Best Movies/Pods-Best Movies.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,28 +81,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7948239E2D7B8D5D62D51DA /* Pods_Best_Movies.framework in Frameworks */,
+				BDD41D8284EF93221A47421F /* Pods_Best_Movies.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0B7E07078F7D2B77EB79B8E0 /* Pods */ = {
+		353258A66DD9D6EB2C801B36 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EBDE4130F25CC6196B9C1B5A /* Pods-Best Movies.debug.xcconfig */,
-				629ABFFEDDEB5A249B99E3F3 /* Pods-Best Movies.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		AB37684712838ACA168CF9A8 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				9848ED0AF2D53548EAC0EB00 /* Pods_Best_Movies.framework */,
+				DBDF55B62F8131C1D866F41F /* Pods_Best_Movies.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3EA54DA55C82F3558F8AC9C8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B9C36673E046BCE6F952F19C /* Pods-Best Movies.debug.xcconfig */,
+				72ACE08CD784B2F015591627 /* Pods-Best Movies.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		E7E7B66021B80F1A00072C38 /* MovieCell */ = {
@@ -118,8 +118,8 @@
 			children = (
 				E7EFCAD421B6AE5100ECED0B /* Best Movies */,
 				E7EFCAD321B6AE5000ECED0B /* Products */,
-				0B7E07078F7D2B77EB79B8E0 /* Pods */,
-				AB37684712838ACA168CF9A8 /* Frameworks */,
+				3EA54DA55C82F3558F8AC9C8 /* Pods */,
+				353258A66DD9D6EB2C801B36 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -263,11 +263,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E7EFCAE721B6AE5200ECED0B /* Build configuration list for PBXNativeTarget "Best Movies" */;
 			buildPhases = (
-				BFA535A16D300B12E4F23C87 /* [CP] Check Pods Manifest.lock */,
+				8E5ECC497A2E19713223AC82 /* [CP] Check Pods Manifest.lock */,
 				E7EFCACE21B6AE5000ECED0B /* Sources */,
 				E7EFCACF21B6AE5000ECED0B /* Frameworks */,
 				E7EFCAD021B6AE5000ECED0B /* Resources */,
-				89AA74CF229B92B5574F8013 /* [CP] Embed Pods Frameworks */,
+				6AEC4715DDA5A86E321D3434 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -341,10 +341,12 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		89AA74CF229B92B5574F8013 /* [CP] Embed Pods Frameworks */ = {
+		6AEC4715DDA5A86E321D3434 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Best Movies/Pods-Best Movies-frameworks.sh",
@@ -354,6 +356,8 @@
 				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
@@ -365,16 +369,20 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Best Movies/Pods-Best Movies-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BFA535A16D300B12E4F23C87 /* [CP] Check Pods Manifest.lock */ = {
+		8E5ECC497A2E19713223AC82 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Best Movies-checkManifestLockResult.txt",
 			);
@@ -543,7 +551,7 @@
 		};
 		E7EFCAE821B6AE5200ECED0B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EBDE4130F25CC6196B9C1B5A /* Pods-Best Movies.debug.xcconfig */;
+			baseConfigurationReference = B9C36673E046BCE6F952F19C /* Pods-Best Movies.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -562,7 +570,7 @@
 		};
 		E7EFCAE921B6AE5200ECED0B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 629ABFFEDDEB5A249B99E3F3 /* Pods-Best Movies.release.xcconfig */;
+			baseConfigurationReference = 72ACE08CD784B2F015591627 /* Pods-Best Movies.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
