@@ -8,6 +8,7 @@
 
 import UIKit
 
+//MARK: - HOMEVIEWDELEGATE -
 protocol HomeMovieDelegate: NSObjectProtocol{
     func startLoading()
     func stopLoading()
@@ -16,6 +17,7 @@ protocol HomeMovieDelegate: NSObjectProtocol{
     func setMovie(_ viewData: HomeMovieViewData)
 }
 
+//MARK: - HOMEVIEWDATA -
 struct HomeMovieViewData {
     var totalMovies = 0
     var movieList = [MovieViewData]()
@@ -26,6 +28,7 @@ struct MovieViewData {
     var urlImage = ""
 }
 
+//MARK: - PRESENTER -
 class MoviesHomePresenter {
     
     private let service:MoviesService!
@@ -39,6 +42,7 @@ class MoviesHomePresenter {
     
 }
 
+//MARK: - SERVICE -
 extension MoviesHomePresenter{
     func getMovies(page: Int){
         self.delegate.startLoading()
@@ -47,18 +51,16 @@ extension MoviesHomePresenter{
             return
         }
         self.service.getMovies(page: page, completionSuccess: { (movies) in
-            DispatchQueue.main.async{
-                Timer.scheduledTimer(withTimeInterval: 5, repeats: false, block: { (_) in
-                    UIView.animate(withDuration: 0.5, animations: {
-                        if let moviesList = movies.results {
-                            self.parseModelToViewData(moviesList)
-                            self.viewData.totalMovies = movies.total_results ?? 0
-                            self.delegate.setMovie(self.viewData)
-                            self.delegate.stopLoading()
-                        }
-                    })
+            DispatchQueue.main.asyncAfter(deadline: .now() + 5.0, execute: {
+                UIView.animate(withDuration: 0.5, animations: {
+                    if let moviesList = movies.results {
+                        self.parseModelToViewData(moviesList)
+                        self.viewData.totalMovies = movies.total_results ?? 0
+                        self.delegate.setMovie(self.viewData)
+                        self.delegate.stopLoading()
+                    }
                 })
-            }
+            })
         }) { (error) in
             DispatchQueue.main.async{
                 self.delegate.errorGeneric()
@@ -81,6 +83,7 @@ extension MoviesHomePresenter{
     }
 }
 
+//MARK: - AUX METHODS -
 extension MoviesHomePresenter{
     private func parseModelToViewData(_ movies: [Movies]){
         var moviewViewData = MovieViewData()

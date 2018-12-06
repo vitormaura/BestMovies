@@ -12,20 +12,20 @@ import Lottie
 
 class MovieCollectionViewCell: UICollectionViewCell {
     
+    //MARK: - OUTLETS -
     @IBOutlet weak var imageMovie: UIImageView!
     @IBOutlet weak var labelTitleMovie: UILabel!
     @IBOutlet weak var favoriteView: UIView!
     @IBOutlet weak var loadingImageView: LOTAnimationView!
-    
-    
+}
+
+//MARK: - AUX METHODS -
+extension MovieCollectionViewCell {
     func prepare(viewData: MovieViewData){
         self.labelTitleMovie.text = viewData.titleMovie
         self.downloadImage(viewData.urlImage, viewData.titleMovie, self.imageMovie)
     }
     
-}
-
-extension MovieCollectionViewCell {
     private func downloadImage(_ url: String, _ name: String, _ imageView: UIImageView){
         self.startLoading()
         if let url:URL = URL(string: url){

@@ -12,13 +12,19 @@ import Lottie
 
 class HomeMoviesViewController: UIViewController {
     
+    //MARK: - OUTLETS -
     @IBOutlet weak var loadingView: LOTAnimationView!
     @IBOutlet weak var moviesCollectionView: UICollectionView!
+    
+    //MARK: - VARIABLES -
     private var presenter:MoviesHomePresenter!
     private var viewData = HomeMovieViewData()
     private var isLoading = false
     private var currentPage = 1
-    
+}
+
+//MARK: - LIFE CYCLE -
+extension HomeMoviesViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.presenter = MoviesHomePresenter(viewDelegate: self)
@@ -34,22 +40,10 @@ class HomeMoviesViewController: UIViewController {
         super.viewWillDisappear(animated)
         self.navigationController?.navigationBar.subviews[1].removeFromSuperview()
     }
-    
-    func addNavBarImage() -> UIView{
-        let navController = navigationController
-        let image = UIImage(named: "logo")
-        let imageView = UIImageView(image: image)
-        let bannerWidth = navController?.navigationBar.frame.size.width
-        let bannerHeight = navController?.navigationBar.frame.size.height
-        let bannerX = bannerWidth! / 2 - (image?.size.width)! / 2
-        let bannerY = bannerHeight! / 2 - (image?.size.height)! / 2
-        imageView.frame = CGRect(x: bannerX, y: bannerY, width: 240, height: 60)
-        imageView.contentMode = .scaleAspectFit
-        return imageView
-    }
 }
 
-extension HomeMoviesViewController: UICollectionViewDataSource{
+//MARK: - COLLECTIONVIEW DATASOURCE -
+extension HomeMoviesViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewData.movieList.count
     }
@@ -64,7 +58,8 @@ extension HomeMoviesViewController: UICollectionViewDataSource{
     }
 }
 
-extension HomeMoviesViewController: UICollectionViewDelegate{
+//MARK: - COLLECTIONVIEW DELEGATE -
+extension HomeMoviesViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         if indexPath.row == self.viewData.movieList.count - 10, !self.isLoading, self.viewData.movieList.count != self.viewData.totalMovies {
             self.currentPage += 1
@@ -73,6 +68,7 @@ extension HomeMoviesViewController: UICollectionViewDelegate{
     }
 }
 
+//MARK: - HOMEVIEWDELEGATE -
 extension HomeMoviesViewController: HomeMovieDelegate {
     func startLoading() {
         UIView.animate(withDuration: 0.2) {
@@ -117,5 +113,21 @@ extension HomeMoviesViewController: HomeMovieDelegate {
     func setMovie(_ viewData: HomeMovieViewData) {
         self.viewData = viewData
         self.moviesCollectionView.reloadData()
+    }
+}
+
+//MARK: - AUX METHODS -
+extension HomeMoviesViewController {
+    func addNavBarImage() -> UIView{
+        let navController = navigationController
+        let image = UIImage(named: "logo")
+        let imageView = UIImageView(image: image)
+        let bannerWidth = navController?.navigationBar.frame.size.width
+        let bannerHeight = navController?.navigationBar.frame.size.height
+        let bannerX = bannerWidth! / 2 - (image?.size.width)! / 2
+        let bannerY = bannerHeight! / 2 - (image?.size.height)! / 2
+        imageView.frame = CGRect(x: bannerX, y: bannerY, width: 240, height: 60)
+        imageView.contentMode = .scaleAspectFit
+        return imageView
     }
 }

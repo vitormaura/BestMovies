@@ -141,7 +141,6 @@
 				E7EFCAF021B6DF1500ECED0B /* Model */,
 				E7EFCAEC21B6B1D300ECED0B /* Service */,
 				E7EFCAED21B6DEC400ECED0B /* Helper */,
-				E7EFCB0121B76D3C00ECED0B /* Extension */,
 			);
 			path = "Best Movies";
 			sourceTree = "<group>";
@@ -157,6 +156,7 @@
 		E7EFCAED21B6DEC400ECED0B /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				E7EFCB0121B76D3C00ECED0B /* Extension */,
 				E7EFCAEE21B6DED900ECED0B /* ErrorService.swift */,
 				E7E7B66321B815F300072C38 /* Reachability.swift */,
 			);
