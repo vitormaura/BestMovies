@@ -19,7 +19,6 @@
 		E7E3B67721B8BFB400DCF2B3 /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E7E3B66C21B8BFB300DCF2B3 /* Lato-Italic.ttf */; };
 		E7E3B67821B8BFB400DCF2B3 /* Lato-Hairline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E7E3B66D21B8BFB300DCF2B3 /* Lato-Hairline.ttf */; };
 		E7E3B67921B8BFB400DCF2B3 /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E7E3B66E21B8BFB300DCF2B3 /* Lato-LightItalic.ttf */; };
-		E7E3B67A21B8BFB400DCF2B3 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = E7E3B66F21B8BFB400DCF2B3 /* OFL.txt */; };
 		E7E3B67C21B8C54C00DCF2B3 /* loader.json in Resources */ = {isa = PBXBuildFile; fileRef = E7E3B67B21B8C54C00DCF2B3 /* loader.json */; };
 		E7E7B66221B80F3700072C38 /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E7B66121B80F3700072C38 /* MovieCollectionViewCell.swift */; };
 		E7E7B66421B815F300072C38 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E7B66321B815F300072C38 /* Reachability.swift */; };
@@ -54,7 +53,6 @@
 		E7E3B66C21B8BFB300DCF2B3 /* Lato-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Italic.ttf"; sourceTree = "<group>"; };
 		E7E3B66D21B8BFB300DCF2B3 /* Lato-Hairline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Hairline.ttf"; sourceTree = "<group>"; };
 		E7E3B66E21B8BFB300DCF2B3 /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-LightItalic.ttf"; sourceTree = "<group>"; };
-		E7E3B66F21B8BFB400DCF2B3 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		E7E3B67B21B8C54C00DCF2B3 /* loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loader.json; sourceTree = "<group>"; };
 		E7E7B66121B80F3700072C38 /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
 		E7E7B66321B815F300072C38 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
@@ -103,6 +101,35 @@
 				72ACE08CD784B2F015591627 /* Pods-Best Movies.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		E79362CD21B98DC700331098 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E7E3B66921B8BFB200DCF2B3 /* Lato-Black.ttf */,
+				E7E3B66621B8BFB200DCF2B3 /* Lato-BlackItalic.ttf */,
+				E7E3B66821B8BFB200DCF2B3 /* Lato-Bold.ttf */,
+				E7E3B66A21B8BFB300DCF2B3 /* Lato-BoldItalic.ttf */,
+				E7E3B66D21B8BFB300DCF2B3 /* Lato-Hairline.ttf */,
+				E7E3B66B21B8BFB300DCF2B3 /* Lato-HairlineItalic.ttf */,
+				E7E3B66C21B8BFB300DCF2B3 /* Lato-Italic.ttf */,
+				E7E3B66521B8BFB200DCF2B3 /* Lato-Light.ttf */,
+				E7E3B66E21B8BFB300DCF2B3 /* Lato-LightItalic.ttf */,
+				E7E3B66721B8BFB200DCF2B3 /* Lato-Regular.ttf */,
+				E7E3B66321B8BF0100DCF2B3 /* BEBAS___.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		E79362CE21B98DFD00331098 /* LottieJSON */ = {
+			isa = PBXGroup;
+			children = (
+				E7E3B67B21B8C54C00DCF2B3 /* loader.json */,
+				E7E7B66D21B8775300072C38 /* search.json */,
+				E7E7B66721B8609500072C38 /* no_connection.json */,
+				E7E7B66521B85C5900072C38 /* video_cam.json */,
+			);
+			path = LottieJSON;
 			sourceTree = "<group>";
 		};
 		E7E7B66021B80F1A00072C38 /* MovieCell */ = {
@@ -175,7 +202,6 @@
 			isa = PBXGroup;
 			children = (
 				E7EFCAF721B6F6A000ECED0B /* HomeMovies */,
-				E7E7B66021B80F1A00072C38 /* MovieCell */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -183,22 +209,8 @@
 		E7EFCAF421B6F5E600ECED0B /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				E7E3B66921B8BFB200DCF2B3 /* Lato-Black.ttf */,
-				E7E3B66621B8BFB200DCF2B3 /* Lato-BlackItalic.ttf */,
-				E7E3B66821B8BFB200DCF2B3 /* Lato-Bold.ttf */,
-				E7E3B66A21B8BFB300DCF2B3 /* Lato-BoldItalic.ttf */,
-				E7E3B66D21B8BFB300DCF2B3 /* Lato-Hairline.ttf */,
-				E7E3B66B21B8BFB300DCF2B3 /* Lato-HairlineItalic.ttf */,
-				E7E3B66C21B8BFB300DCF2B3 /* Lato-Italic.ttf */,
-				E7E3B66521B8BFB200DCF2B3 /* Lato-Light.ttf */,
-				E7E3B66E21B8BFB300DCF2B3 /* Lato-LightItalic.ttf */,
-				E7E3B66721B8BFB200DCF2B3 /* Lato-Regular.ttf */,
-				E7E3B66F21B8BFB400DCF2B3 /* OFL.txt */,
-				E7E3B66321B8BF0100DCF2B3 /* BEBAS___.ttf */,
-				E7E3B67B21B8C54C00DCF2B3 /* loader.json */,
-				E7E7B66D21B8775300072C38 /* search.json */,
-				E7E7B66721B8609500072C38 /* no_connection.json */,
-				E7E7B66521B85C5900072C38 /* video_cam.json */,
+				E79362CD21B98DC700331098 /* Fonts */,
+				E79362CE21B98DFD00331098 /* LottieJSON */,
 				E7EFCADF21B6AE5200ECED0B /* Assets.xcassets */,
 				E7EFCAFE21B7026200ECED0B /* Info.plist */,
 			);
@@ -227,6 +239,7 @@
 			children = (
 				E7EFCB0421B7803100ECED0B /* View */,
 				E7EFCB0521B7804400ECED0B /* Presenter */,
+				E7E7B66021B80F1A00072C38 /* MovieCell */,
 			);
 			path = HomeMovies;
 			sourceTree = "<group>";
@@ -328,7 +341,6 @@
 				E7E3B67121B8BFB400DCF2B3 /* Lato-BlackItalic.ttf in Resources */,
 				E7E3B67921B8BFB400DCF2B3 /* Lato-LightItalic.ttf in Resources */,
 				E7EFCADB21B6AE5100ECED0B /* Main.storyboard in Resources */,
-				E7E3B67A21B8BFB400DCF2B3 /* OFL.txt in Resources */,
 				E7E3B67721B8BFB400DCF2B3 /* Lato-Italic.ttf in Resources */,
 				E7E3B67221B8BFB400DCF2B3 /* Lato-Regular.ttf in Resources */,
 				E7E3B66421B8BF0100DCF2B3 /* BEBAS___.ttf in Resources */,
