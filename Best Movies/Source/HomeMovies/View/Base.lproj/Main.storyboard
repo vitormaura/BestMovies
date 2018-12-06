@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bLO-XA-ej7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bLO-XA-ej7">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="FQY-kV-mqP">
@@ -16,19 +21,19 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="5XA-Ey-MPl">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="0.20382063356164384" colorSpace="custom" customColorSpace="sRGB"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
                                 <real key="value" value="1"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                <real key="value" value="0.20000000000000001"/>
+                                <real key="value" value="1"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
                                 <size key="value" width="0.0" height="2"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="value" red="0.57254901960000004" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </navigationBar>
@@ -56,7 +61,7 @@
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="A3K-08-dA2">
-                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="25" minimumInteritemSpacing="10" sectionInsetReference="layoutMargins" id="At1-gN-SUQ">
                                     <size key="itemSize" width="190" height="366"/>
@@ -100,12 +105,20 @@
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o2X-iZ-Tup" customClass="LOTAnimationView">
+                                                            <rect key="frame" x="15" y="89.5" width="150" height="110"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="110" id="Hzp-v1-PQj"/>
+                                                                <constraint firstAttribute="width" constant="150" id="V9a-5L-kaY"/>
+                                                            </constraints>
+                                                        </view>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.0390625" green="0.5218963566" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="jhq-ED-Ssq" secondAttribute="trailing" constant="12" id="Ha6-SW-M1w"/>
+                                                        <constraint firstItem="o2X-iZ-Tup" firstAttribute="centerX" secondItem="Rge-sK-318" secondAttribute="centerX" id="LNP-2X-DDt"/>
                                                         <constraint firstItem="jhq-ED-Ssq" firstAttribute="top" secondItem="7Zb-IS-Old" secondAttribute="top" constant="13" id="LQF-JR-adS"/>
                                                         <constraint firstAttribute="bottom" secondItem="Rge-sK-318" secondAttribute="bottom" id="ODj-JA-tcH"/>
+                                                        <constraint firstItem="o2X-iZ-Tup" firstAttribute="centerY" secondItem="Rge-sK-318" secondAttribute="centerY" id="QwX-uq-zZb"/>
                                                         <constraint firstItem="Rge-sK-318" firstAttribute="top" secondItem="7Zb-IS-Old" secondAttribute="top" id="ccA-b8-dAh"/>
                                                         <constraint firstAttribute="trailing" secondItem="Rge-sK-318" secondAttribute="trailing" id="rxw-zG-sk2"/>
                                                         <constraint firstItem="Rge-sK-318" firstAttribute="leading" secondItem="7Zb-IS-Old" secondAttribute="leading" id="tx3-sO-2tg"/>
@@ -130,11 +143,12 @@
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filme" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mZz-pQ-Q4y">
                                                             <rect key="frame" x="8" y="8" width="164" height="44"/>
-                                                            <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="15"/>
+                                                            <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="14"/>
                                                             <nil key="highlightedColor"/>
+                                                            <size key="shadowOffset" width="0.0" height="0.0"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.96397791749934858" green="0.96397791749934858" blue="0.96397791749934858" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstItem="mZz-pQ-Q4y" firstAttribute="trailing" secondItem="XC6-ji-JrT" secondAttribute="trailingMargin" id="BOn-10-Dkl"/>
                                                         <constraint firstItem="mZz-pQ-Q4y" firstAttribute="leading" secondItem="XC6-ji-JrT" secondAttribute="leadingMargin" id="DyO-9I-cq2"/>
@@ -169,24 +183,27 @@
                                             <constraint firstItem="XC6-ji-JrT" firstAttribute="top" secondItem="7Zb-IS-Old" secondAttribute="bottom" constant="5" id="qXe-Pq-4FZ"/>
                                         </constraints>
                                         <connections>
+                                            <outlet property="favoriteView" destination="jhq-ED-Ssq" id="bNg-61-ezW"/>
                                             <outlet property="imageMovie" destination="Rge-sK-318" id="4c3-2s-tcu"/>
                                             <outlet property="labelTitleMovie" destination="mZz-pQ-Q4y" id="jk2-ZO-3ri"/>
+                                            <outlet property="loadingImageView" destination="o2X-iZ-Tup" id="FH6-5E-JuB"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="Wu3-mj-cZq"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ZrJ-3T-qdh"/>
                                 </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="abQ-kS-jPz" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="0YI-pB-yWb"/>
-                            <constraint firstItem="A3K-08-dA2" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="1fs-zr-tSI"/>
-                            <constraint firstItem="A3K-08-dA2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="77c-hP-b7m"/>
-                            <constraint firstItem="A3K-08-dA2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ObZ-st-7KQ"/>
-                            <constraint firstItem="A3K-08-dA2" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Sk0-nO-SzE"/>
+                            <constraint firstItem="A3K-08-dA2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="E42-XL-ffL"/>
+                            <constraint firstItem="A3K-08-dA2" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="c0D-ZM-5kC"/>
                             <constraint firstItem="abQ-kS-jPz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="htU-g3-0la"/>
+                            <constraint firstAttribute="bottom" secondItem="A3K-08-dA2" secondAttribute="bottom" id="o0N-xV-W17"/>
+                            <constraint firstItem="A3K-08-dA2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sr9-sn-O3C"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -226,8 +243,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="selectedImageTintColor" red="0.25952924751741979" green="0.45880435839953471" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="0.2038206336" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="0.57254901960000004" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="YUf-7l-hlD"/>

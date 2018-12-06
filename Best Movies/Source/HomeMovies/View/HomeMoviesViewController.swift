@@ -14,31 +14,62 @@ class HomeMoviesViewController: UIViewController {
     
     @IBOutlet weak var loadingView: LOTAnimationView!
     @IBOutlet weak var moviesCollectionView: UICollectionView!
-    private var viewData:HomeMovieViewData!
     private var presenter:MoviesHomePresenter!
+    private var viewData = HomeMovieViewData()
     private var isLoading = false
+    private var currentPage = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.presenter = MoviesHomePresenter(viewDelegate: self)
-        self.presenter.getMovies()
+        self.presenter.getMovies(page: currentPage)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.insertSubview(self.addNavBarImage(), at: 1)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.navigationBar.subviews[1].removeFromSuperview()
+    }
+    
+    func addNavBarImage() -> UIView{
+        let navController = navigationController
+        let image = UIImage(named: "logo")
+        let imageView = UIImageView(image: image)
+        let bannerWidth = navController?.navigationBar.frame.size.width
+        let bannerHeight = navController?.navigationBar.frame.size.height
+        let bannerX = bannerWidth! / 2 - (image?.size.width)! / 2
+        let bannerY = bannerHeight! / 2 - (image?.size.height)! / 2
+        imageView.frame = CGRect(x: bannerX, y: bannerY, width: 240, height: 60)
+        imageView.contentMode = .scaleAspectFit
+        return imageView
     }
 }
 
 extension HomeMoviesViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return isLoading ? 1 : viewData.movieList.count
+        return viewData.movieList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! MovieCollectionViewCell
-        UIView.animate(withDuration: 0.4) {
+        UIView.animate(withDuration: 0.6) {
             cell.spruce.animate([.expand(.moderately), .slide(.down, .moderately)])
         }
-        if !isLoading{
-            cell.prepare(viewData: viewData.movieList[indexPath.row])
-        }
+        cell.prepare(viewData: viewData.movieList[indexPath.row])
         return cell
+    }
+}
+
+extension HomeMoviesViewController: UICollectionViewDelegate{
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if indexPath.row == self.viewData.movieList.count - 10, !self.isLoading, self.viewData.movieList.count != self.viewData.totalMovies {
+            self.currentPage += 1
+            self.presenter.getMoviesForInfiniteScroll(page: currentPage)
+        }
     }
 }
 

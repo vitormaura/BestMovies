@@ -8,11 +8,14 @@
 
 import UIKit
 import Kingfisher
+import Lottie
 
 class MovieCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var imageMovie: UIImageView!
     @IBOutlet weak var labelTitleMovie: UILabel!
+    @IBOutlet weak var favoriteView: UIView!
+    @IBOutlet weak var loadingImageView: LOTAnimationView!
     
     
     func prepare(viewData: MovieViewData){
@@ -44,18 +47,22 @@ extension MovieCollectionViewCell {
     }
     
     private func getImageDefault() -> UIImage{
-        if let image = UIImage(named: "cover-default"){
+        if let image = UIImage(named: "errorImage"){
             return image
         }
         return UIImage()
     }
     
     func startLoading(){
-        //
+        self.loadingImageView.isHidden = false
+        self.loadingImageView.setAnimation(named: "loader")
+        self.loadingImageView.play()
+        self.loadingImageView.loopAnimation = true
     }
     
     func stopLoading(){
-        //
+        self.loadingImageView.isHidden = true
+        self.loadingImageView.pause()
     }
 }
 

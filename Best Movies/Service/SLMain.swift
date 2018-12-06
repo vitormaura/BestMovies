@@ -14,9 +14,8 @@ class MoviesService {
     let urlMovies = "https://api.themoviedb.org/3/movie/popular"
     let api_Key = "e65a4e0038c43c31f8acd19351a625ba"
     let language = "pt-BR"
-    let page = "1"
     
-    func getMovies(completionSuccess: @escaping (_ model:PopularMovies)-> Void, completionError: @escaping (_ error:ErrorType?)-> Void){
+    func getMovies(page: Int, completionSuccess: @escaping (_ model:PopularMovies)-> Void, completionError: @escaping (_ error:ErrorType?)-> Void){
         
         Alamofire.request("\(urlMovies)?api_key=\(api_Key)&language=\(language)&page=\(page)").responseJSON { (response) in
             switch response.result{

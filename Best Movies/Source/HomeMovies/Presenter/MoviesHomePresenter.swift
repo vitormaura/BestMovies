@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 protocol HomeMovieDelegate: NSObjectProtocol{
     func startLoading()
     func stopLoading()
@@ -18,6 +17,7 @@ protocol HomeMovieDelegate: NSObjectProtocol{
 }
 
 struct HomeMovieViewData {
+    var totalMovies = 0
     var movieList = [MovieViewData]()
 }
 
@@ -40,18 +40,19 @@ class MoviesHomePresenter {
 }
 
 extension MoviesHomePresenter{
-    func getMovies(){
+    func getMovies(page: Int){
         self.delegate.startLoading()
         if !Reachability.isConnectedToNetwork() {
             self.delegate.errorConnection()
             return
         }
-        self.service.getMovies(completionSuccess: { (movies) in
+        self.service.getMovies(page: page, completionSuccess: { (movies) in
             DispatchQueue.main.async{
                 Timer.scheduledTimer(withTimeInterval: 5, repeats: false, block: { (_) in
                     UIView.animate(withDuration: 0.5, animations: {
                         if let moviesList = movies.results {
                             self.parseModelToViewData(moviesList)
+                            self.viewData.totalMovies = movies.total_results ?? 0
                             self.delegate.setMovie(self.viewData)
                             self.delegate.stopLoading()
                         }
@@ -62,6 +63,20 @@ extension MoviesHomePresenter{
             DispatchQueue.main.async{
                 self.delegate.errorGeneric()
             }
+        }
+    }
+    
+    func getMoviesForInfiniteScroll(page: Int){
+        self.service.getMovies(page: page, completionSuccess: { (movies) in
+            DispatchQueue.main.async{
+                if let moviesList = movies.results {
+                    self.parseModelToViewData(moviesList)
+                    self.delegate.setMovie(self.viewData)
+                    self.delegate.stopLoading()
+                }
+            }
+        }) { (_) in
+            
         }
     }
 }
