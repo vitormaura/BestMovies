@@ -31,9 +31,9 @@ extension HomeMoviesViewController {
         self.presenter.getMovies(page: currentPage)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.navigationBar.insertSubview(self.addNavBarImage(), at: 1)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.navigationController?.navigationBar.insertSubview(ImageHelper.addNavBarImage(navigationController!, "logo"), at: 1)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -58,6 +58,13 @@ extension HomeMoviesViewController: UICollectionViewDataSource {
     }
 }
 
+//MARK: - COLLECTIONVIEW FLOWLAYOUT DELEGATE -
+extension HomeMoviesViewController: UICollectionViewDelegateFlowLayout{
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: self.view.frame.width * 0.44, height: self.view.frame.height * 0.39)
+    }
+}
+
 //MARK: - COLLECTIONVIEW DELEGATE -
 extension HomeMoviesViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
@@ -65,6 +72,10 @@ extension HomeMoviesViewController: UICollectionViewDelegate {
             self.currentPage += 1
             self.presenter.getMoviesForInfiniteScroll(page: currentPage)
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "homeSegue", sender: indexPath.row)
     }
 }
 
@@ -118,16 +129,10 @@ extension HomeMoviesViewController: HomeMovieDelegate {
 
 //MARK: - AUX METHODS -
 extension HomeMoviesViewController {
-    func addNavBarImage() -> UIView{
-        let navController = navigationController
-        let image = UIImage(named: "logo")
-        let imageView = UIImageView(image: image)
-        let bannerWidth = navController?.navigationBar.frame.size.width
-        let bannerHeight = navController?.navigationBar.frame.size.height
-        let bannerX = bannerWidth! / 2 - (image?.size.width)! / 2
-        let bannerY = bannerHeight! / 2 - (image?.size.height)! / 2
-        imageView.frame = CGRect(x: bannerX, y: bannerY, width: 240, height: 60)
-        imageView.contentMode = .scaleAspectFit
-        return imageView
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "homeSegue" {
+            let viewController = segue.destination as! MoviesDescriptionViewController
+            viewController.viewData = self.viewData.movieList[sender as! Int]
+        }
     }
 }

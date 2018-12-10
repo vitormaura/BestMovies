@@ -25,7 +25,14 @@ struct HomeMovieViewData {
 
 struct MovieViewData {
     var titleMovie = ""
+    var releaseDate = ""
     var urlImage = ""
+    var urlPoster = ""
+    var description = ""
+    var gen_ids = [Int]()
+    var vote_average = 0.0
+    var isFavorite = false
+    var favoriteImage = ""
 }
 
 //MARK: - PRESENTER -
@@ -86,11 +93,16 @@ extension MoviesHomePresenter{
 //MARK: - AUX METHODS -
 extension MoviesHomePresenter{
     private func parseModelToViewData(_ movies: [Movies]){
-        var moviewViewData = MovieViewData()
+        var movieViewData = MovieViewData()
         for movie in movies{
-            moviewViewData.titleMovie = movie.title ?? ""
-            moviewViewData.urlImage = "https://image.tmdb.org/t/p/w500\(movie.poster_path ?? "")"
-            self.viewData.movieList.append(moviewViewData)
+            movieViewData.titleMovie = movie.title ?? ""
+            movieViewData.releaseDate = movie.release_date ?? ""
+            movieViewData.urlImage = "https://image.tmdb.org/t/p/w500\(movie.poster_path ?? "")"
+            movieViewData.urlPoster = "https://image.tmdb.org/t/p/w500\(movie.backdrop_path ?? "")"
+            movieViewData.description = movie.overview ?? ""
+            movieViewData.gen_ids = movie.genre_ids ?? []
+            movieViewData.vote_average = movie.vote_average ?? 0
+            self.viewData.movieList.append(movieViewData)
         }
     }
 }

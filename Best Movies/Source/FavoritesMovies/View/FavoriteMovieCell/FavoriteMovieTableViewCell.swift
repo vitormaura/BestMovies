@@ -1,29 +1,34 @@
 //
-//  MovieCollectionViewCell.swift
+//  FavoriteMovieTableViewCell.swift
 //  Best Movies
 //
-//  Created by Vitor Maura on 05/12/18.
+//  Created by Vitor Maura on 09/12/18.
 //  Copyright © 2018 Vitor Maura. All rights reserved.
 //
 
 import UIKit
 import Kingfisher
-import Lottie
 
-class MovieCollectionViewCell: UICollectionViewCell {
+class FavoriteMovieTableViewCell: UITableViewCell {
     
     //MARK: - OUTLETS -
-    @IBOutlet weak var imageMovie: UIImageView!
-    @IBOutlet weak var labelTitleMovie: UILabel!
-    @IBOutlet weak var favoriteView: UIView!
-    @IBOutlet weak var loadingImageView: LOTAnimationView!
+    @IBOutlet weak var imageCover: UIImageView!
+    @IBOutlet weak var labelTitle: UILabel!
+    @IBOutlet weak var labelDate: UILabel!
+    @IBOutlet weak var textDescription: UITextView!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
 }
 
 //MARK: - AUX METHODS -
-extension MovieCollectionViewCell {
-    func prepare(viewData: MovieViewData){
-        self.labelTitleMovie.text = viewData.titleMovie
-        self.downloadImage(viewData.urlImage, viewData.titleMovie, self.imageMovie)
+extension FavoriteMovieTableViewCell {
+    func prepare(_ viewData: FavoriteMovieViewData){
+        self.labelTitle.text = viewData.titleMovie
+        self.labelDate.text = viewData.releaseDate
+        self.textDescription.text = viewData.description
+        self.downloadImage(viewData.urlImage, viewData.titleMovie, UIImageView())
     }
     
     private func downloadImage(_ url: String, _ name: String, _ imageView: UIImageView){
@@ -34,15 +39,15 @@ extension MovieCollectionViewCell {
                 DispatchQueue.main.async(execute: {
                     self.stopLoading()
                     if let imageResult = image {
-                        self.imageMovie.image = imageResult
+                        self.imageCover.image = imageResult
                     }else {
-                        self.imageMovie.image = self.getImageDefault()
+                        self.imageCover.image = self.getImageDefault()
                     }
                 })
             })
         }else{
             self.stopLoading()
-            self.imageMovie.image = self.getImageDefault()
+            self.imageCover.image = self.getImageDefault()
         }
     }
     
@@ -54,15 +59,10 @@ extension MovieCollectionViewCell {
     }
     
     func startLoading(){
-        self.loadingImageView.isHidden = false
-        self.loadingImageView.setAnimation(named: "loader")
-        self.loadingImageView.play()
-        self.loadingImageView.loopAnimation = true
+       //
     }
     
     func stopLoading(){
-        self.loadingImageView.isHidden = true
-        self.loadingImageView.pause()
+       //
     }
 }
-

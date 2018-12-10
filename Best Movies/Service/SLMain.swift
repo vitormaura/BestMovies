@@ -13,7 +13,7 @@ class MoviesService {
     
     let urlMovies = "https://api.themoviedb.org/3/movie/popular"
     let api_Key = "e65a4e0038c43c31f8acd19351a625ba"
-    let language = "pt-BR"
+    let language = "en-US"
     
     func getMovies(page: Int, completionSuccess: @escaping (_ model:PopularMovies)-> Void, completionError: @escaping (_ error:ErrorType?)-> Void){
         
