@@ -99,6 +99,10 @@ extension HomeMoviesViewController: HomeMovieDelegate {
         }
     }
     
+    func startLoadingInfiniteScroll() {
+        self.isLoading = true
+    }
+    
     func stopLoading() {
         UIView.animate(withDuration: 0.2) {
             self.isLoading = false
@@ -106,6 +110,10 @@ extension HomeMoviesViewController: HomeMovieDelegate {
             self.moviesCollectionView.isHidden = false
             self.loadingView.pause()
         }
+    }
+    
+    func stopLoadingInfiniteScroll() {
+        self.isLoading = false
     }
     
     func errorConnection(){

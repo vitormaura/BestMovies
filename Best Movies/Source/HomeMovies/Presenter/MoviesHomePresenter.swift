@@ -11,7 +11,9 @@ import UIKit
 //MARK: - HOMEVIEWDELEGATE -
 protocol HomeMovieDelegate: NSObjectProtocol{
     func startLoading()
+    func startLoadingInfiniteScroll()
     func stopLoading()
+    func stopLoadingInfiniteScroll()
     func errorConnection()
     func errorGeneric()
     func setMovie(_ viewData: HomeMovieViewData)
@@ -76,12 +78,13 @@ extension MoviesHomePresenter{
     }
     
     func getMoviesForInfiniteScroll(page: Int){
+        self.delegate.startLoadingInfiniteScroll()
         self.service.getMovies(page: page, completionSuccess: { (movies) in
             DispatchQueue.main.async{
                 if let moviesList = movies.results {
                     self.parseModelToViewData(moviesList)
                     self.delegate.setMovie(self.viewData)
-                    self.delegate.stopLoading()
+                    self.delegate.stopLoadingInfiniteScroll()
                 }
             }
         }) { (_) in
