@@ -15,6 +15,7 @@ class HomeMoviesViewController: UIViewController {
     //MARK: - OUTLETS -
     @IBOutlet weak var loadingView: LOTAnimationView!
     @IBOutlet weak var moviesCollectionView: UICollectionView!
+    @IBOutlet weak var labelMessage: UILabel!
     
     //MARK: - VARIABLES -
     private var presenter:MoviesHomePresenter!
@@ -29,6 +30,11 @@ extension HomeMoviesViewController {
         super.viewDidLoad()
         self.presenter = MoviesHomePresenter(viewDelegate: self)
         self.presenter.getMovies(page: currentPage)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.moviesCollectionView.reloadData()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -89,6 +95,7 @@ extension HomeMoviesViewController: HomeMovieDelegate {
             self.loadingView.setAnimation(named: "video_cam")
             self.loadingView.play()
             self.loadingView.loopAnimation = true
+            self.labelMessage.text = "Loading movies..."
         }
     }
     
@@ -108,6 +115,7 @@ extension HomeMoviesViewController: HomeMovieDelegate {
             self.loadingView.setAnimation(named: "no_connection")
             self.loadingView.play()
             self.loadingView.loopAnimation = true
+            self.labelMessage.text = "No connection. Tap here to try again"
         }
     }
     
@@ -118,6 +126,7 @@ extension HomeMoviesViewController: HomeMovieDelegate {
             self.loadingView.setAnimation(named: "search")
             self.loadingView.play()
             self.loadingView.loopAnimation = true
+            self.labelMessage.text = "An error has ocurred. Tap here to try again"
         }
     }
     

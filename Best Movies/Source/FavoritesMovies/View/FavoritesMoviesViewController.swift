@@ -8,11 +8,13 @@
 
 import UIKit
 import Spruce
+import Lottie
 
 class FavoritesMoviesViewController: UIViewController {
     
     //MARK: - OUTLETS -
     @IBOutlet weak var favoritesTableView: UITableView!
+    @IBOutlet weak var emptyView: LOTAnimationView!
     
     //MARK: - VARIABLES -
     private var presenter:FavoritesMoviesPresenter!
@@ -28,7 +30,6 @@ extension FavoritesMoviesViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.presenter.getFavoriteListDataBase()
-        self.favoritesTableView.reloadData()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -44,25 +45,6 @@ extension FavoritesMoviesViewController {
 
 //MARK: - TABLEVIEW DELEGATE -
 extension FavoritesMoviesViewController: UITableViewDelegate {
-    @available(iOS 11.0, *)
-    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let delete = deleteAction(at: indexPath)
-        return UISwipeActionsConfiguration(actions: [delete])
-    }
-    
-    @available(iOS 11.0, *)
-    func deleteAction(at indexPath: IndexPath) -> UIContextualAction {
-        let action = UIContextualAction(style: .destructive, title: "") { (action, view, completion) in
-            self.presenter.removeFavorite(self.viewData.listFavorites[indexPath.row])
-            self.viewData.listFavorites.remove(at: indexPath.row)
-            self.favoritesTableView.deleteRows(at: [indexPath], with: .automatic)
-            completion(true)
-        }
-        action.image = UIImage(named: "trash")
-        action.backgroundColor = .red
-        return action
-    }
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: "favoritesSegue", sender: indexPath.row)
     }
@@ -88,10 +70,20 @@ extension FavoritesMoviesViewController: UITableViewDataSource {
 extension FavoritesMoviesViewController: FavoriteMovieDelegate {
     func setFavoriteMovies(viewData: ListFavoriteMoviesViewData) {
         self.viewData = viewData
+        self.favoritesTableView.reloadData()
+        self.emptyView.isHidden = true
+        self.favoritesTableView.isHidden = false
+        self.emptyView.pause()
     }
     
     func showEmpty() {
-        
+        UIView.animate(withDuration: 0.2) {
+            self.emptyView.isHidden = false
+            self.favoritesTableView.isHidden = true
+            self.emptyView.setAnimation(named: "emoji_wink")
+            self.emptyView.play()
+            self.emptyView.loopAnimation = true
+        }
     }
 }
 

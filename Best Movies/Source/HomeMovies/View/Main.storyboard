@@ -73,11 +73,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="abQ-kS-jPz" customClass="LOTAnimationView">
-                                <rect key="frame" x="82" y="351.5" width="250" height="250"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jo4-B3-nff">
+                                <rect key="frame" x="63" y="297.5" width="290" height="358"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="abQ-kS-jPz" customClass="LOTAnimationView">
+                                        <rect key="frame" x="5" y="8" width="278" height="275"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HFx-Fn-uuG">
+                                        <rect key="frame" x="7" y="291" width="274" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="xlP-Aa-WHQ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="7Lo-y4-2dI"/>
-                                    <constraint firstAttribute="width" constant="250" id="Zpt-sI-IEd"/>
+                                    <constraint firstAttribute="trailing" secondItem="HFx-Fn-uuG" secondAttribute="trailing" constant="9" id="3h2-sI-PAe"/>
+                                    <constraint firstAttribute="trailing" secondItem="abQ-kS-jPz" secondAttribute="trailing" constant="7" id="EeN-8L-ucP"/>
+                                    <constraint firstItem="HFx-Fn-uuG" firstAttribute="leading" secondItem="Jo4-B3-nff" secondAttribute="leading" constant="7" id="apu-kL-v7y"/>
+                                    <constraint firstAttribute="trailing" secondItem="abQ-kS-jPz" secondAttribute="trailing" constant="7" id="cZh-cR-wB4"/>
+                                    <constraint firstItem="abQ-kS-jPz" firstAttribute="leading" secondItem="Jo4-B3-nff" secondAttribute="leading" constant="5" id="geP-F1-tMD"/>
+                                    <constraint firstItem="HFx-Fn-uuG" firstAttribute="top" secondItem="abQ-kS-jPz" secondAttribute="bottom" constant="8" id="iPp-vi-vGN"/>
+                                    <constraint firstItem="abQ-kS-jPz" firstAttribute="top" secondItem="Jo4-B3-nff" secondAttribute="top" constant="8" id="imF-fR-2Ho"/>
+                                    <constraint firstAttribute="bottom" secondItem="HFx-Fn-uuG" secondAttribute="bottom" constant="27" id="la1-ZJ-hVE"/>
+                                    <constraint firstItem="abQ-kS-jPz" firstAttribute="leading" secondItem="Jo4-B3-nff" secondAttribute="leading" constant="5" id="oh5-f7-crY"/>
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="A3K-08-dA2">
@@ -217,18 +238,21 @@
                         </subviews>
                         <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="abQ-kS-jPz" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="0YI-pB-yWb"/>
+                            <constraint firstItem="Jo4-B3-nff" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" constant="1" id="0Aj-df-xQH"/>
                             <constraint firstItem="A3K-08-dA2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="E42-XL-ffL"/>
+                            <constraint firstItem="Jo4-B3-nff" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Hih-uI-F3s"/>
                             <constraint firstItem="A3K-08-dA2" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="c0D-ZM-5kC"/>
-                            <constraint firstItem="abQ-kS-jPz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="htU-g3-0la"/>
+                            <constraint firstItem="Jo4-B3-nff" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.4" id="lw9-34-ol3"/>
                             <constraint firstAttribute="bottom" secondItem="A3K-08-dA2" secondAttribute="bottom" id="o0N-xV-W17"/>
                             <constraint firstItem="A3K-08-dA2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sr9-sn-O3C"/>
+                            <constraint firstItem="Jo4-B3-nff" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="zVV-fp-sgE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="mostViewed" id="ccj-RP-A53"/>
                     <navigationItem key="navigationItem" id="ilJ-t3-imt"/>
                     <connections>
+                        <outlet property="labelMessage" destination="HFx-Fn-uuG" id="tIk-R6-fxp"/>
                         <outlet property="loadingView" destination="abQ-kS-jPz" id="sSf-aD-prt"/>
                         <outlet property="moviesCollectionView" destination="A3K-08-dA2" id="wxL-Cp-FQW"/>
                         <segue destination="FTi-7y-5Ej" kind="show" identifier="homeSegue" id="nZi-By-9uC"/>
@@ -246,6 +270,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IQo-cx-oD4" customClass="LOTAnimationView">
+                                <rect key="frame" x="83" y="351" width="248" height="251"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You do not have any favorites yet" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8vl-SS-Y2G">
+                                        <rect key="frame" x="5" y="225" width="238" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="rpZ-Lk-JuU"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="8vl-SS-Y2G" secondAttribute="trailing" constant="5" id="F8k-st-x2U"/>
+                                    <constraint firstItem="8vl-SS-Y2G" firstAttribute="top" secondItem="IQo-cx-oD4" secondAttribute="top" constant="225" id="bri-aG-hCV"/>
+                                    <constraint firstItem="8vl-SS-Y2G" firstAttribute="leading" secondItem="IQo-cx-oD4" secondAttribute="leading" constant="5" id="fBw-FI-OQh"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4wF-o0-F98">
                                 <rect key="frame" x="0.0" y="140" width="414" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -383,16 +427,21 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="IQo-cx-oD4" firstAttribute="centerX" secondItem="mIn-pr-DPb" secondAttribute="centerX" id="A6b-LM-POX"/>
+                            <constraint firstItem="IQo-cx-oD4" firstAttribute="width" secondItem="iJ8-8b-sOi" secondAttribute="width" multiplier="0.6" id="BPN-ys-oTz"/>
+                            <constraint firstItem="IQo-cx-oD4" firstAttribute="centerY" secondItem="mIn-pr-DPb" secondAttribute="centerY" id="Fho-yM-fSA"/>
                             <constraint firstAttribute="bottom" secondItem="yr5-lm-NNt" secondAttribute="bottom" id="LRv-nk-jl7"/>
                             <constraint firstItem="yr5-lm-NNt" firstAttribute="top" secondItem="iJ8-8b-sOi" secondAttribute="top" id="XPh-Cm-urF"/>
                             <constraint firstItem="yr5-lm-NNt" firstAttribute="leading" secondItem="mIn-pr-DPb" secondAttribute="leading" id="bHi-71-rQg"/>
                             <constraint firstItem="yr5-lm-NNt" firstAttribute="trailing" secondItem="mIn-pr-DPb" secondAttribute="trailing" id="c1u-hR-HaV"/>
+                            <constraint firstItem="IQo-cx-oD4" firstAttribute="height" secondItem="iJ8-8b-sOi" secondAttribute="height" multiplier="0.28" id="weO-mA-n1L"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mIn-pr-DPb"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="favorites" id="Ji4-bD-Htv"/>
                     <navigationItem key="navigationItem" id="3TE-fr-Xhw"/>
                     <connections>
+                        <outlet property="emptyView" destination="IQo-cx-oD4" id="CIF-fV-Xvi"/>
                         <outlet property="favoritesTableView" destination="yr5-lm-NNt" id="rme-p7-eTA"/>
                         <segue destination="FTi-7y-5Ej" kind="show" identifier="favoritesSegue" id="Ngc-q9-o57"/>
                     </connections>
@@ -582,6 +631,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Ngc-q9-o57"/>
+        <segue reference="nZi-By-9uC"/>
     </inferredMetricsTieBreakers>
 </document>
