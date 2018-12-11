@@ -17,6 +17,7 @@ protocol HomeMovieDelegate: NSObjectProtocol{
     func errorConnection()
     func errorGeneric()
     func setMovie(_ viewData: HomeMovieViewData)
+    func setGenre(_ viewData: MoviesGenresViewData)
 }
 
 //MARK: - HOMEVIEWDATA -
@@ -35,6 +36,16 @@ struct MovieViewData {
     var vote_average = 0.0
     var isFavorite = false
     var favoriteImage = ""
+    var genres = [String]()
+}
+
+struct MoviesGenresViewData {
+    var genres = [GenresViewData]()
+}
+
+struct GenresViewData {
+    var id = 0
+    var name = ""
 }
 
 //MARK: - PRESENTER -
@@ -43,6 +54,7 @@ class MoviesHomePresenter {
     private let service:MoviesService!
     private weak var delegate:HomeMovieDelegate!
     private lazy var viewData = HomeMovieViewData()
+    private lazy var genresViewData = MoviesGenresViewData()
     
     init(viewDelegate:HomeMovieDelegate) {
         self.delegate = viewDelegate
@@ -91,6 +103,19 @@ extension MoviesHomePresenter{
             
         }
     }
+    
+    func getGenres() {
+        self.service.getGenres(completionSuccess: { (genres) in
+            DispatchQueue.main.async {
+                if let genreList = genres.genres {
+                    self.parseModelToViewData(genreList)
+                    self.delegate.setGenre(self.genresViewData)
+                }
+            }
+        }) { (error) in
+            print("error")
+        }
+    }
 }
 
 //MARK: - AUX METHODS -
@@ -103,9 +128,26 @@ extension MoviesHomePresenter{
             movieViewData.urlImage = "https://image.tmdb.org/t/p/w500\(movie.poster_path ?? "")"
             movieViewData.urlPoster = "https://image.tmdb.org/t/p/w500\(movie.backdrop_path ?? "")"
             movieViewData.description = movie.overview ?? ""
-            movieViewData.gen_ids = movie.genre_ids ?? []
+            movieViewData.genres = self.getGenresForViewData(movie.genre_ids ?? [])
             movieViewData.vote_average = movie.vote_average ?? 0
             self.viewData.movieList.append(movieViewData)
         }
+    }
+    
+    private func parseModelToViewData(_ genres: [Genres]){
+        var viewData = GenresViewData()
+        for genre in genres{
+            viewData.id = genre.id ?? 0
+            viewData.name = genre.name ?? ""
+            self.genresViewData.genres.append(viewData)
+        }
+    }
+    
+    private func getGenresForViewData(_ gen_ids: [Int]) -> [String]{
+        var genList = [String]()
+        for id in gen_ids{
+            genList.append(self.genresViewData.genres.filter{$0.id == id}.first?.name ?? "")
+        }
+        return genList
     }
 }

@@ -62,8 +62,19 @@ extension MoviesDescriptionPresenter {
         favoriteModel.releaseDate = viewData.releaseDate 
         favoriteModel.vote_average = viewData.vote_average 
         favoriteModel.isFavorite = viewData.isFavorite 
-        favoriteModel.favoriteImage = viewData.favoriteImage 
+        favoriteModel.favoriteImage = viewData.favoriteImage
+        favoriteModel.genres = self.createModelGenre(viewData.genres)
         return favoriteModel
+    }
+    
+    private func createModelGenre(_ names: [String]) -> [FavoriteGenre] {
+        var genresModel = [FavoriteGenre]()
+        for name in names{
+            let genre = FavoriteGenre()
+            genre.name = name
+            genresModel.append(genre)
+        }
+        return genresModel
     }
     
     func checkFavovite(title: String) -> Bool{

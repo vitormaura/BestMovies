@@ -23,6 +23,7 @@ class MoviesDescriptionViewController: UIViewController {
     //MARK: - VARIABLES -
     private var presenter:MoviesDescriptionPresenter!
     public var viewData = MovieViewData()
+    public var genreViewData = MoviesGenresViewData()
 }
 
 //MARK: - LIFE CYCLE -
@@ -70,6 +71,7 @@ extension MoviesDescriptionViewController {
         title = viewData.titleMovie
         self.labelNote.text = String(viewData.vote_average)
         self.labelDate.text = "Release: \(viewData.releaseDate)"
+        self.labelGen.text = viewData.genres.sorted().joined(separator: ", ")
         self.textDescription.text = viewData.description
     }
     

@@ -20,6 +20,7 @@ class HomeMoviesViewController: UIViewController {
     //MARK: - VARIABLES -
     private var presenter:MoviesHomePresenter!
     private var viewData = HomeMovieViewData()
+    private var genreViewData = MoviesGenresViewData()
     private var isLoading = false
     private var currentPage = 1
 }
@@ -29,6 +30,7 @@ extension HomeMoviesViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.presenter = MoviesHomePresenter(viewDelegate: self)
+        self.presenter.getGenres()
         self.presenter.getMovies(page: currentPage)
     }
     
@@ -142,6 +144,10 @@ extension HomeMoviesViewController: HomeMovieDelegate {
         self.viewData = viewData
         self.moviesCollectionView.reloadData()
     }
+    
+    func setGenre(_ viewData: MoviesGenresViewData) {
+        self.genreViewData = viewData
+    }
 }
 
 //MARK: - AUX METHODS -
@@ -150,6 +156,7 @@ extension HomeMoviesViewController {
         if segue.identifier == "homeSegue" {
             let viewController = segue.destination as! MoviesDescriptionViewController
             viewController.viewData = self.viewData.movieList[sender as! Int]
+            viewController.genreViewData = self.genreViewData
         }
     }
 }

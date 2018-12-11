@@ -6,7 +6,7 @@
 //  Copyright © 2018 Vitor Maura. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 class FavoriteModel {
     var titleMovie:String?
@@ -14,8 +14,12 @@ class FavoriteModel {
     var urlImage:String?
     var urlPoster:String?
     var description:String?
-    var gen_ids:Int64?
     var vote_average:Double?
     var isFavorite:Bool?
     var favoriteImage:String?
+    var genres:[FavoriteGenre]?
+}
+
+class FavoriteGenre {
+    var name:String?
 }

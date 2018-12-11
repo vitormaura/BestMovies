@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bLO-XA-ej7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bLO-XA-ej7">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -274,9 +274,9 @@
                                 <rect key="frame" x="83" y="351" width="248" height="251"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You do not have any favorites yet" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8vl-SS-Y2G">
-                                        <rect key="frame" x="5" y="225" width="238" height="40"/>
+                                        <rect key="frame" x="5" y="220" width="238" height="45"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="rpZ-Lk-JuU"/>
+                                            <constraint firstAttribute="height" constant="45" id="rpZ-Lk-JuU"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="15"/>
                                         <nil key="textColor"/>
@@ -286,7 +286,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="8vl-SS-Y2G" secondAttribute="trailing" constant="5" id="F8k-st-x2U"/>
-                                    <constraint firstItem="8vl-SS-Y2G" firstAttribute="top" secondItem="IQo-cx-oD4" secondAttribute="top" constant="225" id="bri-aG-hCV"/>
+                                    <constraint firstItem="8vl-SS-Y2G" firstAttribute="top" secondItem="IQo-cx-oD4" secondAttribute="top" constant="220" id="bri-aG-hCV"/>
                                     <constraint firstItem="8vl-SS-Y2G" firstAttribute="leading" secondItem="IQo-cx-oD4" secondAttribute="leading" constant="5" id="fBw-FI-OQh"/>
                                 </constraints>
                             </view>
@@ -316,16 +316,16 @@
                                                                     <rect key="frame" x="114" y="30" width="270" height="142"/>
                                                                     <subviews>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IJq-Ap-gX1">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="270" height="20.5"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="270" height="20"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome Filme" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYy-fs-T6T">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="135" height="20.5"/>
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="135" height="20"/>
                                                                                     <fontDescription key="fontDescription" name="BebasKai" family="Bebas Kai" pointSize="17"/>
                                                                                     <nil key="textColor"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00/00/0000" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hnP-ug-QQV">
-                                                                                    <rect key="frame" x="135" y="0.0" width="135" height="20.5"/>
+                                                                                    <rect key="frame" x="135" y="0.0" width="135" height="20"/>
                                                                                     <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="12"/>
                                                                                     <nil key="textColor"/>
                                                                                     <nil key="highlightedColor"/>
@@ -333,7 +333,7 @@
                                                                             </subviews>
                                                                         </stackView>
                                                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OIU-Pi-T84">
-                                                                            <rect key="frame" x="0.0" y="20.5" width="270" height="121.5"/>
+                                                                            <rect key="frame" x="0.0" y="20" width="270" height="122"/>
                                                                             <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore</string>
                                                                             <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -508,7 +508,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Romance, Drama" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56L-BN-S3o">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Romance, Drama" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56L-BN-S3o">
                                                 <rect key="frame" x="11" y="79" width="234" height="18"/>
                                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="15"/>
                                                 <nil key="textColor"/>
@@ -631,6 +631,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="nZi-By-9uC"/>
+        <segue reference="Ngc-q9-o57"/>
     </inferredMetricsTieBreakers>
 </document>

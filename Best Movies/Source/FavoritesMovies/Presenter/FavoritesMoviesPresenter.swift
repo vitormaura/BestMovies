@@ -26,10 +26,10 @@ struct FavoriteMovieViewData {
     var urlImage = ""
     var urlPoster = ""
     var description = ""
-    var gen_ids = [Int]()
     var vote_average = 0.0
     var isFavorite = false
     var favoriteImage = ""
+    var genres = [String]()
 }
 
 class FavoritesMoviesPresenter {
@@ -69,7 +69,18 @@ extension FavoritesMoviesPresenter{
         viewDataFavorite.vote_average = model.vote_average ?? 0.0
         viewDataFavorite.isFavorite = model.isFavorite ?? false
         viewDataFavorite.favoriteImage = model.favoriteImage ?? ""
+        viewDataFavorite.genres = self.createListGenre(model.genres ?? [])
         listViewData.append(viewDataFavorite)
+    }
+    
+    private func createListGenre(_ genres: [FavoriteGenre]) -> [String] {
+        var nameList = [String]()
+        for genre in genres{
+            var name = ""
+            name = genre.name ?? ""
+            nameList.append(name)
+        }
+        return nameList
     }
     
     func removeFavorite(_ viewData: FavoriteMovieViewData){
@@ -86,7 +97,18 @@ extension FavoritesMoviesPresenter{
         favoriteModel.vote_average = viewData.vote_average
         favoriteModel.isFavorite = viewData.isFavorite
         favoriteModel.favoriteImage = viewData.favoriteImage
+        favoriteModel.genres = self.createModelGenre(viewData.genres)
         return favoriteModel
+    }
+    
+    private func createModelGenre(_ names: [String]) -> [FavoriteGenre] {
+        var genresModel = [FavoriteGenre]()
+        for name in names{
+            let genre = FavoriteGenre()
+            genre.name = name
+            genresModel.append(genre)
+        }
+        return genresModel
     }
     
     func parseHomeViewDataToFavoriteViewData(_ viewData: FavoriteMovieViewData) -> MovieViewData{
@@ -99,6 +121,7 @@ extension FavoritesMoviesPresenter{
         movieViewData.vote_average = viewData.vote_average
         movieViewData.isFavorite = viewData.isFavorite
         movieViewData.favoriteImage = viewData.favoriteImage
+        movieViewData.genres = viewData.genres
         return movieViewData
     }
 }

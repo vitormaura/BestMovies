@@ -103,14 +103,22 @@ extension FavoriteManager{
         favoriteDataBase.date = model.releaseDate ?? ""
         favoriteDataBase.urlCover = model.urlImage ?? ""
         favoriteDataBase.urlPoster = model.urlPoster ?? ""
-        favoriteDataBase.genIDs = model.gen_ids ?? 0
         favoriteDataBase.note = model.vote_average ?? 0.0
         favoriteDataBase.isFavorite = model.isFavorite ?? false
         favoriteDataBase.favoriteImage = model.favoriteImage ?? ""
+        self.parseFavoriteGenreFromDataBase(model.genres ?? [], favoriteDataBase)
         do {
             try self.saveDatabase()
         } catch  {
             print(error)
+        }
+    }
+    
+    private func parseFavoriteGenreFromDataBase(_ model:[FavoriteGenre], _ database: FavoriteMovieDatabase){
+        for genre in model{
+            let favoriteGenreDataBase = FavoriteGenresDatabase(context: self.context)
+            favoriteGenreDataBase.name = genre.name
+            database.addToGenres(favoriteGenreDataBase)
         }
     }
     
@@ -121,12 +129,24 @@ extension FavoriteManager{
         favoriteModel.releaseDate = dataBase.date
         favoriteModel.urlImage = dataBase.urlCover
         favoriteModel.urlPoster = dataBase.urlPoster
-        favoriteModel.gen_ids = dataBase.genIDs
+        favoriteModel.genres = self.parseGenreDataBaseForModel(dataBase.genres)
         favoriteModel.vote_average = dataBase.note
         favoriteModel.isFavorite = dataBase.isFavorite
         favoriteModel.favoriteImage = dataBase.favoriteImage
         return favoriteModel
     }
     
+    private func parseGenreDataBaseForModel(_ listGenreDataBase:NSSet?) -> [FavoriteGenre]{
+        var listGenre = [FavoriteGenre]()
+        var genre:FavoriteGenre!
+        if let list = listGenreDataBase{
+            for case let genreRow as FavoriteGenresDatabase in list{
+                genre = FavoriteGenre()
+                genre.name = genreRow.name
+                listGenre.append(genre)
+            }
+        }
+        return listGenre
+    }
 }
 
