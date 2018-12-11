@@ -8,12 +8,13 @@
 
 import UIKit
 import Kingfisher
+import Lottie
 
 protocol MoviesDescriptionDelegate: NSObjectProtocol{
-    func startLoading()
-    func stopLoading()
-    func setImageDefault()
-    func setImage(_ image: UIImage)
+    func startLoading(_ loadingView: LOTAnimationView)
+    func stopLoading(_ loadingView: LOTAnimationView)
+    func setImageDefault(_ imageView: UIImageView, _ nameDefault: String)
+    func setImage(_ imageView: UIImageView, _ image: UIImage)
 }
 
 class MoviesDescriptionPresenter {
@@ -29,23 +30,23 @@ class MoviesDescriptionPresenter {
 }
 
 extension MoviesDescriptionPresenter {
-    func downloadImage(_ url: String, _ name: String, _ imageView: UIImageView){
-        self.delegate.startLoading()
+    func downloadImage(_ url: String, _ name: String, _ imageView: UIImageView, _ loadingView: LOTAnimationView, _ nameDefault: String){
+        self.delegate.startLoading(loadingView)
         if let url:URL = URL(string: url){
             let resource = ImageResource(downloadURL: url, cacheKey: name)
             imageView.kf.setImage(with: resource, options: nil, completionHandler: { (image, _, _, _) in
                 DispatchQueue.main.async(execute: {
-                    self.delegate.stopLoading()
+                    self.delegate.stopLoading(loadingView)
                     if let imageResult = image {
-                        self.delegate.setImage(imageResult)
+                        self.delegate.setImage(imageView, imageResult)
                     }else {
-                        self.delegate.setImageDefault()
+                        self.delegate.setImageDefault(imageView, nameDefault)
                     }
                 })
             })
         }else{
-            self.delegate.stopLoading()
-            self.delegate.setImageDefault()
+            self.delegate.stopLoading(loadingView)
+            self.delegate.setImageDefault(imageView, nameDefault)
         }
     }
     

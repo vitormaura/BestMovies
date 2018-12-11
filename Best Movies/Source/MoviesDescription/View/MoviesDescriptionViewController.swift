@@ -19,6 +19,8 @@ class MoviesDescriptionViewController: UIViewController {
     @IBOutlet weak var labelNote: UILabel!
     @IBOutlet weak var textDescription: UITextView!
     @IBOutlet weak var favoriteView: LOTAnimationView!
+    @IBOutlet weak var loadingPoster: LOTAnimationView!
+    @IBOutlet weak var loadingCover: LOTAnimationView!
     
     //MARK: - VARIABLES -
     private var presenter:MoviesDescriptionPresenter!
@@ -31,8 +33,8 @@ extension MoviesDescriptionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.presenter = MoviesDescriptionPresenter(viewDelegate: self)
-        self.presenter.downloadImage(viewData.urlImage, viewData.titleMovie, self.imageCover)
-        self.presenter.downloadImage(viewData.urlPoster, viewData.description, self.imagePoster)
+        self.presenter.downloadImage(viewData.urlImage, viewData.titleMovie, self.imageCover, self.loadingCover, "errorImage")
+        self.presenter.downloadImage(viewData.urlPoster, viewData.description, self.imagePoster, self.loadingPoster, "posterError")
         self.favoriteView.setAnimation(named: "favourite_app_icon")
         self.addTapToFavoriteView()
         self.prepare(viewData)
@@ -48,20 +50,26 @@ extension MoviesDescriptionViewController {
 
 //MARK: - MOVIESDESCRIPTION DELEGATE -
 extension MoviesDescriptionViewController: MoviesDescriptionDelegate{
-    func startLoading() {
-        //
+    func startLoading(_ loadingView: LOTAnimationView) {
+        loadingView.setAnimation(named: "loader")
+        loadingView.loopAnimation = true
+        loadingView.isHidden = false
+        loadingView.play()
     }
     
-    func stopLoading() {
-        //
+    func stopLoading(_ loadingView: LOTAnimationView) {
+        loadingView.isHidden = true
+        loadingView.pause()
     }
     
-    func setImageDefault() {
-        //
+    func setImageDefault(_ imageView: UIImageView, _ nameDefault:String) {
+        if let image = UIImage(named: nameDefault){
+            imageView.image = image
+        }
     }
     
-    func setImage(_ image: UIImage) {
-        //
+    func setImage(_ imageView: UIImageView, _ image: UIImage) {
+        imageView.image = image
     }
 }
 

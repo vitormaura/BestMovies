@@ -8,6 +8,7 @@
 
 import UIKit
 import Kingfisher
+import Lottie
 
 class FavoriteMovieTableViewCell: UITableViewCell {
     
@@ -16,6 +17,7 @@ class FavoriteMovieTableViewCell: UITableViewCell {
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var labelDate: UILabel!
     @IBOutlet weak var textDescription: UITextView!
+    @IBOutlet weak var loadingView: LOTAnimationView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -59,10 +61,14 @@ extension FavoriteMovieTableViewCell {
     }
     
     func startLoading(){
-       //
+       self.loadingView.setAnimation(named: "loader")
+       self.loadingView.loopAnimation = true
+       self.loadingView.isHidden = false
+       self.loadingView.play()
     }
     
     func stopLoading(){
-       //
+       self.loadingView.isHidden = true
+       self.loadingView.pause()
     }
 }
