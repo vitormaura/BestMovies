@@ -20,6 +20,7 @@
 		E7687F2E21BEA90D0007C014 /* emoji_wink.json in Resources */ = {isa = PBXBuildFile; fileRef = E7687F2D21BEA90D0007C014 /* emoji_wink.json */; };
 		E797AA4621BF366D0090E7F1 /* MovieGenres.swift in Sources */ = {isa = PBXBuildFile; fileRef = E797AA4521BF366D0090E7F1 /* MovieGenres.swift */; };
 		E797AA4821BF81130090E7F1 /* error_cross.json in Resources */ = {isa = PBXBuildFile; fileRef = E797AA4721BF81130090E7F1 /* error_cross.json */; };
+		E797AA4A21BF87800090E7F1 /* HapticAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E797AA4921BF87800090E7F1 /* HapticAlerts.swift */; };
 		E7E3B67021B8BFB400DCF2B3 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E7E3B66521B8BFB200DCF2B3 /* Lato-Light.ttf */; };
 		E7E3B67121B8BFB400DCF2B3 /* Lato-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E7E3B66621B8BFB200DCF2B3 /* Lato-BlackItalic.ttf */; };
 		E7E3B67221B8BFB400DCF2B3 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E7E3B66721B8BFB200DCF2B3 /* Lato-Regular.ttf */; };
@@ -68,6 +69,7 @@
 		E7687F2D21BEA90D0007C014 /* emoji_wink.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = emoji_wink.json; sourceTree = "<group>"; };
 		E797AA4521BF366D0090E7F1 /* MovieGenres.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieGenres.swift; sourceTree = "<group>"; };
 		E797AA4721BF81130090E7F1 /* error_cross.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = error_cross.json; sourceTree = "<group>"; };
+		E797AA4921BF87800090E7F1 /* HapticAlerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticAlerts.swift; sourceTree = "<group>"; };
 		E7E3B66521B8BFB200DCF2B3 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
 		E7E3B66621B8BFB200DCF2B3 /* Lato-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BlackItalic.ttf"; sourceTree = "<group>"; };
 		E7E3B66721B8BFB200DCF2B3 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
@@ -286,6 +288,7 @@
 				E7E7B66321B815F300072C38 /* Reachability.swift */,
 				E7E4E30021BD9A0F007DD54F /* GradientView.swift */,
 				E702EC0A21BDE1E00043E5EF /* ImageHelper.swift */,
+				E797AA4921BF87800090E7F1 /* HapticAlerts.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -536,6 +539,7 @@
 				E702EC0921BDDBC00043E5EF /* FavoriteMovieTableViewCell.swift in Sources */,
 				E702EC1221BDF0B00043E5EF /* FavoriteMovie.swift in Sources */,
 				E702EC1421BDF1960043E5EF /* FavoriteManager.swift in Sources */,
+				E797AA4A21BF87800090E7F1 /* HapticAlerts.swift in Sources */,
 				E702EC0221BDDB420043E5EF /* FavoritesMoviesViewController.swift in Sources */,
 				E7E40CA821BB58FC00DA16F8 /* MoviesDescriptionViewController.swift in Sources */,
 				E7EFCAEB21B6AF7900ECED0B /* SLMain.swift in Sources */,

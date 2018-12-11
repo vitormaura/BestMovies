@@ -29,6 +29,7 @@ extension FavoritesMoviesViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.presenter = FavoritesMoviesPresenter(viewDelegate: self)
+        self.hideKeyboardWhenTappedAround()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -52,6 +53,7 @@ extension FavoritesMoviesViewController {
 //MARK: - TABLEVIEW DELEGATE -
 extension FavoritesMoviesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        HapticAlerts.hapticReturnLight()
         self.performSegue(withIdentifier: "favoritesSegue", sender: indexPath.row)
     }
 }
@@ -102,6 +104,16 @@ extension FavoritesMoviesViewController {
             let data = self.isFiltering() ? self.searchMovies[sender as! Int] : self.viewData.listFavorites[sender as! Int]
             viewController.viewData = self.presenter.parseHomeViewDataToFavoriteViewData(data)
         }
+    }
+    
+    func hideKeyboardWhenTappedAround(){
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
 }
 

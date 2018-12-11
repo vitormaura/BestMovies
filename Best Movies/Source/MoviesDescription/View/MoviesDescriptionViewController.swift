@@ -96,10 +96,12 @@ extension MoviesDescriptionViewController {
             self.viewData.isFavorite = true
             self.favoriteView.play()
             self.presenter.addOrRemoveFavorite(viewData)
+            HapticAlerts.hapticReturnSuccess()
         }else{
             self.viewData.isFavorite = false
             self.favoriteView.stop()
             self.presenter.addOrRemoveFavorite(viewData)
+            HapticAlerts.hapticReturnCancel()
         }
     }
     

@@ -84,6 +84,7 @@ extension HomeMoviesViewController: UICollectionViewDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        HapticAlerts.hapticReturnLight()
         self.performSegue(withIdentifier: "homeSegue", sender: indexPath.row)
     }
 }
@@ -170,6 +171,7 @@ extension HomeMoviesViewController {
     
     @objc func reload(){
         if !self.isLoading{
+            HapticAlerts.hapticReturnLight()
            self.presenter.getMovies(page: currentPage)
         }
     }
