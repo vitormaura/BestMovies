@@ -32,6 +32,7 @@ extension HomeMoviesViewController {
         self.presenter = MoviesHomePresenter(viewDelegate: self)
         self.presenter.getGenres()
         self.presenter.getMovies(page: currentPage)
+        self.addTapToReload()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -121,6 +122,7 @@ extension HomeMoviesViewController: HomeMovieDelegate {
     func errorConnection(){
         UIView.animate(withDuration: 0.2) {
             self.loadingView.isHidden = false
+            self.isLoading = false
             self.moviesCollectionView.isHidden = true
             self.loadingView.setAnimation(named: "no_connection")
             self.loadingView.play()
@@ -132,8 +134,9 @@ extension HomeMoviesViewController: HomeMovieDelegate {
     func errorGeneric(){
         UIView.animate(withDuration: 0.2) {
             self.loadingView.isHidden = false
+            self.isLoading = false
             self.moviesCollectionView.isHidden = true
-            self.loadingView.setAnimation(named: "search")
+            self.loadingView.setAnimation(named: "error_cross")
             self.loadingView.play()
             self.loadingView.loopAnimation = true
             self.labelMessage.text = "An error has ocurred. Tap here to try again"
@@ -157,6 +160,17 @@ extension HomeMoviesViewController {
             let viewController = segue.destination as! MoviesDescriptionViewController
             viewController.viewData = self.viewData.movieList[sender as! Int]
             viewController.genreViewData = self.genreViewData
+        }
+    }
+    
+    func addTapToReload(){
+         let tapReload = UITapGestureRecognizer(target: self, action: #selector(self.reload))
+         self.loadingView.addGestureRecognizer(tapReload)
+    }
+    
+    @objc func reload(){
+        if !self.isLoading{
+           self.presenter.getMovies(page: currentPage)
         }
     }
 }

@@ -92,11 +92,13 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="HFx-Fn-uuG" secondAttribute="trailing" constant="9" id="3h2-sI-PAe"/>
                                     <constraint firstAttribute="trailing" secondItem="abQ-kS-jPz" secondAttribute="trailing" constant="7" id="EeN-8L-ucP"/>
+                                    <constraint firstAttribute="height" constant="358" id="aKP-Eu-rDm"/>
                                     <constraint firstItem="HFx-Fn-uuG" firstAttribute="leading" secondItem="Jo4-B3-nff" secondAttribute="leading" constant="7" id="apu-kL-v7y"/>
                                     <constraint firstAttribute="trailing" secondItem="abQ-kS-jPz" secondAttribute="trailing" constant="7" id="cZh-cR-wB4"/>
                                     <constraint firstItem="abQ-kS-jPz" firstAttribute="leading" secondItem="Jo4-B3-nff" secondAttribute="leading" constant="5" id="geP-F1-tMD"/>
                                     <constraint firstItem="HFx-Fn-uuG" firstAttribute="top" secondItem="abQ-kS-jPz" secondAttribute="bottom" constant="8" id="iPp-vi-vGN"/>
                                     <constraint firstItem="abQ-kS-jPz" firstAttribute="top" secondItem="Jo4-B3-nff" secondAttribute="top" constant="8" id="imF-fR-2Ho"/>
+                                    <constraint firstAttribute="width" constant="290" id="kYk-bJ-13W"/>
                                     <constraint firstAttribute="bottom" secondItem="HFx-Fn-uuG" secondAttribute="bottom" constant="27" id="la1-ZJ-hVE"/>
                                     <constraint firstItem="abQ-kS-jPz" firstAttribute="leading" secondItem="Jo4-B3-nff" secondAttribute="leading" constant="5" id="oh5-f7-crY"/>
                                 </constraints>
@@ -242,10 +244,8 @@
                             <constraint firstItem="A3K-08-dA2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="E42-XL-ffL"/>
                             <constraint firstItem="Jo4-B3-nff" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Hih-uI-F3s"/>
                             <constraint firstItem="A3K-08-dA2" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="c0D-ZM-5kC"/>
-                            <constraint firstItem="Jo4-B3-nff" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.4" id="lw9-34-ol3"/>
                             <constraint firstAttribute="bottom" secondItem="A3K-08-dA2" secondAttribute="bottom" id="o0N-xV-W17"/>
                             <constraint firstItem="A3K-08-dA2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sr9-sn-O3C"/>
-                            <constraint firstItem="Jo4-B3-nff" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="zVV-fp-sgE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -273,18 +273,20 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IQo-cx-oD4" customClass="LOTAnimationView">
                                 <rect key="frame" x="83" y="351" width="248" height="251"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You do not have any favorites yet" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8vl-SS-Y2G">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8vl-SS-Y2G">
                                         <rect key="frame" x="5" y="220" width="238" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="rpZ-Lk-JuU"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="15"/>
+                                        <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="13"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="248" id="5sG-US-rhu"/>
+                                    <constraint firstAttribute="height" constant="251" id="62O-b5-5dg"/>
                                     <constraint firstAttribute="trailing" secondItem="8vl-SS-Y2G" secondAttribute="trailing" constant="5" id="F8k-st-x2U"/>
                                     <constraint firstItem="8vl-SS-Y2G" firstAttribute="top" secondItem="IQo-cx-oD4" secondAttribute="top" constant="220" id="bri-aG-hCV"/>
                                     <constraint firstItem="8vl-SS-Y2G" firstAttribute="leading" secondItem="IQo-cx-oD4" secondAttribute="leading" constant="5" id="fBw-FI-OQh"/>
@@ -298,9 +300,17 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="202" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="yr5-lm-NNt">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" searchBarStyle="minimal" placeholder="Search..." id="abA-wd-PCC">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="aXi-Oh-fb3" id="ZYu-x3-c7m"/>
+                                    </connections>
+                                </searchBar>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="202" id="D0p-sr-YFx" customClass="FavoriteMovieTableViewCell" customModule="Best_Movies" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="202"/>
+                                        <rect key="frame" x="0.0" y="84" width="414" height="202"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="D0p-sr-YFx" id="lJq-8j-mQn">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="202"/>
@@ -428,13 +438,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="IQo-cx-oD4" firstAttribute="centerX" secondItem="mIn-pr-DPb" secondAttribute="centerX" id="A6b-LM-POX"/>
-                            <constraint firstItem="IQo-cx-oD4" firstAttribute="width" secondItem="iJ8-8b-sOi" secondAttribute="width" multiplier="0.6" id="BPN-ys-oTz"/>
                             <constraint firstItem="IQo-cx-oD4" firstAttribute="centerY" secondItem="mIn-pr-DPb" secondAttribute="centerY" id="Fho-yM-fSA"/>
                             <constraint firstAttribute="bottom" secondItem="yr5-lm-NNt" secondAttribute="bottom" id="LRv-nk-jl7"/>
                             <constraint firstItem="yr5-lm-NNt" firstAttribute="top" secondItem="iJ8-8b-sOi" secondAttribute="top" id="XPh-Cm-urF"/>
                             <constraint firstItem="yr5-lm-NNt" firstAttribute="leading" secondItem="mIn-pr-DPb" secondAttribute="leading" id="bHi-71-rQg"/>
                             <constraint firstItem="yr5-lm-NNt" firstAttribute="trailing" secondItem="mIn-pr-DPb" secondAttribute="trailing" id="c1u-hR-HaV"/>
-                            <constraint firstItem="IQo-cx-oD4" firstAttribute="height" secondItem="iJ8-8b-sOi" secondAttribute="height" multiplier="0.28" id="weO-mA-n1L"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mIn-pr-DPb"/>
                     </view>
@@ -443,6 +451,8 @@
                     <connections>
                         <outlet property="emptyView" destination="IQo-cx-oD4" id="CIF-fV-Xvi"/>
                         <outlet property="favoritesTableView" destination="yr5-lm-NNt" id="rme-p7-eTA"/>
+                        <outlet property="labelEmpty" destination="8vl-SS-Y2G" id="WfN-3U-JDN"/>
+                        <outlet property="searchBar" destination="abA-wd-PCC" id="49d-pe-cW5"/>
                         <segue destination="FTi-7y-5Ej" kind="show" identifier="favoritesSegue" id="Ngc-q9-o57"/>
                     </connections>
                 </viewController>
@@ -631,6 +641,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Ngc-q9-o57"/>
+        <segue reference="nZi-By-9uC"/>
     </inferredMetricsTieBreakers>
 </document>
