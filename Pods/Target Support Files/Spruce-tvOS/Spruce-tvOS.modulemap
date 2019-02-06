@@ -1,0 +1,6 @@
+framework module Spruce {
+  umbrella header "Spruce-tvOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

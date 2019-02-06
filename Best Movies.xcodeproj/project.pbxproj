@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BDD41D8284EF93221A47421F /* Pods_Best_Movies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBDF55B62F8131C1D866F41F /* Pods_Best_Movies.framework */; };
+		36AD8ED588596F8DEEC50CA8 /* Pods_Best_Movies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DE56AACCC633E6856FBE3D6 /* Pods_Best_Movies.framework */; };
+		85A323473367C8B05436D6FD /* Pods_Best_Movies_TV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D483B076955286943906ACB9 /* Pods_Best_Movies_TV.framework */; };
 		E702EBFF21BDD9140043E5EF /* BebasKai.otf in Resources */ = {isa = PBXBuildFile; fileRef = E702EBFE21BDD9140043E5EF /* BebasKai.otf */; };
 		E702EC0221BDDB420043E5EF /* FavoritesMoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E702EC0121BDDB420043E5EF /* FavoritesMoviesViewController.swift */; };
 		E702EC0621BDDB7F0043E5EF /* FavoritesMoviesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E702EC0521BDDB7F0043E5EF /* FavoritesMoviesPresenter.swift */; };
@@ -17,10 +18,37 @@
 		E702EC1021BDEF5B0043E5EF /* MainCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E702EC0F21BDEF5B0043E5EF /* MainCoreData.swift */; };
 		E702EC1221BDF0B00043E5EF /* FavoriteMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E702EC1121BDF0B00043E5EF /* FavoriteMovie.swift */; };
 		E702EC1421BDF1960043E5EF /* FavoriteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E702EC1321BDF1960043E5EF /* FavoriteManager.swift */; };
+		E72A05CB220A602D004FEC7A /* MoviesTVDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72A05CA220A602D004FEC7A /* MoviesTVDescriptionViewController.swift */; };
+		E72A05CD220A6048004FEC7A /* MoviesTVDescriptionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72A05CC220A6048004FEC7A /* MoviesTVDescriptionPresenter.swift */; };
+		E72A05DC220A6A72004FEC7A /* Lato-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E72A05D1220A6A6F004FEC7A /* Lato-BoldItalic.ttf */; };
+		E72A05DD220A6A72004FEC7A /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E72A05D2220A6A6F004FEC7A /* Lato-LightItalic.ttf */; };
+		E72A05DE220A6A72004FEC7A /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E72A05D3220A6A70004FEC7A /* Lato-Bold.ttf */; };
+		E72A05DF220A6A72004FEC7A /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E72A05D4220A6A70004FEC7A /* Lato-Light.ttf */; };
+		E72A05E0220A6A72004FEC7A /* Lato-Hairline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E72A05D5220A6A70004FEC7A /* Lato-Hairline.ttf */; };
+		E72A05E1220A6A72004FEC7A /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E72A05D6220A6A70004FEC7A /* Lato-Italic.ttf */; };
+		E72A05E2220A6A72004FEC7A /* BebasKai.otf in Resources */ = {isa = PBXBuildFile; fileRef = E72A05D7220A6A71004FEC7A /* BebasKai.otf */; };
+		E72A05E3220A6A72004FEC7A /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E72A05D8220A6A71004FEC7A /* Lato-Regular.ttf */; };
+		E72A05E4220A6A72004FEC7A /* Lato-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E72A05D9220A6A71004FEC7A /* Lato-BlackItalic.ttf */; };
+		E72A05E5220A6A72004FEC7A /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E72A05DA220A6A72004FEC7A /* Lato-Black.ttf */; };
+		E72A05E6220A6A72004FEC7A /* Lato-HairlineItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E72A05DB220A6A72004FEC7A /* Lato-HairlineItalic.ttf */; };
+		E72A05E7220A73F7004FEC7A /* ExtensionUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EFCB0221B76DDD00ECED0B /* ExtensionUIView.swift */; };
 		E7687F2E21BEA90D0007C014 /* emoji_wink.json in Resources */ = {isa = PBXBuildFile; fileRef = E7687F2D21BEA90D0007C014 /* emoji_wink.json */; };
 		E797AA4621BF366D0090E7F1 /* MovieGenres.swift in Sources */ = {isa = PBXBuildFile; fileRef = E797AA4521BF366D0090E7F1 /* MovieGenres.swift */; };
 		E797AA4821BF81130090E7F1 /* error_cross.json in Resources */ = {isa = PBXBuildFile; fileRef = E797AA4721BF81130090E7F1 /* error_cross.json */; };
 		E797AA4A21BF87800090E7F1 /* HapticAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E797AA4921BF87800090E7F1 /* HapticAlerts.swift */; };
+		E7D59F13220113BA002E5320 /* FavoriteMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E702EC1121BDF0B00043E5EF /* FavoriteMovie.swift */; };
+		E7D59F14220113BC002E5320 /* MovieGenres.swift in Sources */ = {isa = PBXBuildFile; fileRef = E797AA4521BF366D0090E7F1 /* MovieGenres.swift */; };
+		E7D59F15220113C7002E5320 /* ErrorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EFCAEE21B6DED900ECED0B /* ErrorService.swift */; };
+		E7D59F16220113C9002E5320 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E7B66321B815F300072C38 /* Reachability.swift */; };
+		E7D59F1922011917002E5320 /* MoviesTVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D59F1822011917002E5320 /* MoviesTVViewController.swift */; };
+		E7D59F2522012762002E5320 /* MoviesHomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D59F2422012762002E5320 /* MoviesHomePresenter.swift */; };
+		E7D59F2E22012A3E002E5320 /* loader.json in Resources */ = {isa = PBXBuildFile; fileRef = E7D59F2722012A3D002E5320 /* loader.json */; };
+		E7D59F2F22012A3E002E5320 /* emoji_wink.json in Resources */ = {isa = PBXBuildFile; fileRef = E7D59F2822012A3D002E5320 /* emoji_wink.json */; };
+		E7D59F3022012A3E002E5320 /* search.json in Resources */ = {isa = PBXBuildFile; fileRef = E7D59F2922012A3D002E5320 /* search.json */; };
+		E7D59F3122012A3E002E5320 /* error_cross.json in Resources */ = {isa = PBXBuildFile; fileRef = E7D59F2A22012A3E002E5320 /* error_cross.json */; };
+		E7D59F3222012A3E002E5320 /* no_connection.json in Resources */ = {isa = PBXBuildFile; fileRef = E7D59F2B22012A3E002E5320 /* no_connection.json */; };
+		E7D59F3322012A3E002E5320 /* video_cam.json in Resources */ = {isa = PBXBuildFile; fileRef = E7D59F2C22012A3E002E5320 /* video_cam.json */; };
+		E7D59F3422012A3E002E5320 /* favourite_app_icon.json in Resources */ = {isa = PBXBuildFile; fileRef = E7D59F2D22012A3E002E5320 /* favourite_app_icon.json */; };
 		E7E3B67021B8BFB400DCF2B3 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E7E3B66521B8BFB200DCF2B3 /* Lato-Light.ttf */; };
 		E7E3B67121B8BFB400DCF2B3 /* Lato-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E7E3B66621B8BFB200DCF2B3 /* Lato-BlackItalic.ttf */; };
 		E7E3B67221B8BFB400DCF2B3 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E7E3B66721B8BFB200DCF2B3 /* Lato-Regular.ttf */; };
@@ -40,6 +68,13 @@
 		E7E7B66621B85C5900072C38 /* video_cam.json in Resources */ = {isa = PBXBuildFile; fileRef = E7E7B66521B85C5900072C38 /* video_cam.json */; };
 		E7E7B66821B8609500072C38 /* no_connection.json in Resources */ = {isa = PBXBuildFile; fileRef = E7E7B66721B8609500072C38 /* no_connection.json */; };
 		E7E7B66E21B8775300072C38 /* search.json in Resources */ = {isa = PBXBuildFile; fileRef = E7E7B66D21B8775300072C38 /* search.json */; };
+		E7EA3F3D2201099200A16660 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EA3F3C2201099200A16660 /* AppDelegate.swift */; };
+		E7EA3F422201099200A16660 /* Best_Movies_TV.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E7EA3F402201099200A16660 /* Best_Movies_TV.xcdatamodeld */; };
+		E7EA3F452201099200A16660 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7EA3F432201099200A16660 /* Main.storyboard */; };
+		E7EA3F472201099400A16660 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7EA3F462201099400A16660 /* Assets.xcassets */; };
+		E7EA3F4D22010A7D00A16660 /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EA3F4C22010A7D00A16660 /* MovieCollectionViewCell.swift */; };
+		E7EA3F4E22010AA600A16660 /* SLMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EFCAEA21B6AF7900ECED0B /* SLMain.swift */; };
+		E7EA3F4F22010AB000A16660 /* PopularMovies.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EFCAF121B6E36600ECED0B /* PopularMovies.swift */; };
 		E7EFCAD621B6AE5100ECED0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EFCAD521B6AE5100ECED0B /* AppDelegate.swift */; };
 		E7EFCADE21B6AE5100ECED0B /* Best_Movies.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E7EFCADC21B6AE5100ECED0B /* Best_Movies.xcdatamodeld */; };
 		E7EFCAE021B6AE5200ECED0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7EFCADF21B6AE5200ECED0B /* Assets.xcassets */; };
@@ -53,9 +88,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		72ACE08CD784B2F015591627 /* Pods-Best Movies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Best Movies.release.xcconfig"; path = "Pods/Target Support Files/Pods-Best Movies/Pods-Best Movies.release.xcconfig"; sourceTree = "<group>"; };
-		B9C36673E046BCE6F952F19C /* Pods-Best Movies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Best Movies.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Best Movies/Pods-Best Movies.debug.xcconfig"; sourceTree = "<group>"; };
-		DBDF55B62F8131C1D866F41F /* Pods_Best_Movies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Best_Movies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		22C2FCE2D5244165BA080A32 /* Pods-Best Movies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Best Movies.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Best Movies/Pods-Best Movies.debug.xcconfig"; sourceTree = "<group>"; };
+		8C3F658207758DA6599D8A85 /* Pods-Best Movies TV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Best Movies TV.release.xcconfig"; path = "Pods/Target Support Files/Pods-Best Movies TV/Pods-Best Movies TV.release.xcconfig"; sourceTree = "<group>"; };
+		8DE56AACCC633E6856FBE3D6 /* Pods_Best_Movies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Best_Movies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1AFBFC2CBA03D6F0BAFC40E /* Pods-Best Movies TV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Best Movies TV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Best Movies TV/Pods-Best Movies TV.debug.xcconfig"; sourceTree = "<group>"; };
+		C80E9E2C721D6E2D29F35AE6 /* Pods-Best Movies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Best Movies.release.xcconfig"; path = "Pods/Target Support Files/Pods-Best Movies/Pods-Best Movies.release.xcconfig"; sourceTree = "<group>"; };
+		D483B076955286943906ACB9 /* Pods_Best_Movies_TV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Best_Movies_TV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E702EBFE21BDD9140043E5EF /* BebasKai.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BebasKai.otf; sourceTree = "<group>"; };
 		E702EC0121BDDB420043E5EF /* FavoritesMoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesMoviesViewController.swift; sourceTree = "<group>"; };
 		E702EC0521BDDB7F0043E5EF /* FavoritesMoviesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesMoviesPresenter.swift; sourceTree = "<group>"; };
@@ -65,10 +103,32 @@
 		E702EC0F21BDEF5B0043E5EF /* MainCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoreData.swift; sourceTree = "<group>"; };
 		E702EC1121BDF0B00043E5EF /* FavoriteMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteMovie.swift; sourceTree = "<group>"; };
 		E702EC1321BDF1960043E5EF /* FavoriteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteManager.swift; sourceTree = "<group>"; };
+		E72A05CA220A602D004FEC7A /* MoviesTVDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTVDescriptionViewController.swift; sourceTree = "<group>"; };
+		E72A05CC220A6048004FEC7A /* MoviesTVDescriptionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTVDescriptionPresenter.swift; sourceTree = "<group>"; };
+		E72A05D1220A6A6F004FEC7A /* Lato-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BoldItalic.ttf"; sourceTree = "<group>"; };
+		E72A05D2220A6A6F004FEC7A /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-LightItalic.ttf"; sourceTree = "<group>"; };
+		E72A05D3220A6A70004FEC7A /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
+		E72A05D4220A6A70004FEC7A /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
+		E72A05D5220A6A70004FEC7A /* Lato-Hairline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Hairline.ttf"; sourceTree = "<group>"; };
+		E72A05D6220A6A70004FEC7A /* Lato-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Italic.ttf"; sourceTree = "<group>"; };
+		E72A05D7220A6A71004FEC7A /* BebasKai.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BebasKai.otf; sourceTree = "<group>"; };
+		E72A05D8220A6A71004FEC7A /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
+		E72A05D9220A6A71004FEC7A /* Lato-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BlackItalic.ttf"; sourceTree = "<group>"; };
+		E72A05DA220A6A72004FEC7A /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
+		E72A05DB220A6A72004FEC7A /* Lato-HairlineItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-HairlineItalic.ttf"; sourceTree = "<group>"; };
 		E7687F2D21BEA90D0007C014 /* emoji_wink.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = emoji_wink.json; sourceTree = "<group>"; };
 		E797AA4521BF366D0090E7F1 /* MovieGenres.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieGenres.swift; sourceTree = "<group>"; };
 		E797AA4721BF81130090E7F1 /* error_cross.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = error_cross.json; sourceTree = "<group>"; };
 		E797AA4921BF87800090E7F1 /* HapticAlerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticAlerts.swift; sourceTree = "<group>"; };
+		E7D59F1822011917002E5320 /* MoviesTVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTVViewController.swift; sourceTree = "<group>"; };
+		E7D59F2422012762002E5320 /* MoviesHomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesHomePresenter.swift; sourceTree = "<group>"; };
+		E7D59F2722012A3D002E5320 /* loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = loader.json; path = "Best Movies/Resource/LottieJSON/loader.json"; sourceTree = SOURCE_ROOT; };
+		E7D59F2822012A3D002E5320 /* emoji_wink.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = emoji_wink.json; path = "Best Movies/Resource/LottieJSON/emoji_wink.json"; sourceTree = SOURCE_ROOT; };
+		E7D59F2922012A3D002E5320 /* search.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = search.json; path = "Best Movies/Resource/LottieJSON/search.json"; sourceTree = SOURCE_ROOT; };
+		E7D59F2A22012A3E002E5320 /* error_cross.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = error_cross.json; path = "Best Movies/Resource/LottieJSON/error_cross.json"; sourceTree = SOURCE_ROOT; };
+		E7D59F2B22012A3E002E5320 /* no_connection.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = no_connection.json; path = "Best Movies/Resource/LottieJSON/no_connection.json"; sourceTree = SOURCE_ROOT; };
+		E7D59F2C22012A3E002E5320 /* video_cam.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = video_cam.json; path = "Best Movies/Resource/LottieJSON/video_cam.json"; sourceTree = SOURCE_ROOT; };
+		E7D59F2D22012A3E002E5320 /* favourite_app_icon.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = favourite_app_icon.json; path = "Best Movies/Resource/LottieJSON/favourite_app_icon.json"; sourceTree = SOURCE_ROOT; };
 		E7E3B66521B8BFB200DCF2B3 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
 		E7E3B66621B8BFB200DCF2B3 /* Lato-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BlackItalic.ttf"; sourceTree = "<group>"; };
 		E7E3B66721B8BFB200DCF2B3 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
@@ -88,6 +148,13 @@
 		E7E7B66521B85C5900072C38 /* video_cam.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = video_cam.json; sourceTree = "<group>"; };
 		E7E7B66721B8609500072C38 /* no_connection.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = no_connection.json; sourceTree = "<group>"; };
 		E7E7B66D21B8775300072C38 /* search.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = search.json; sourceTree = "<group>"; };
+		E7EA3F3A2201099200A16660 /* Best Movies TV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Best Movies TV.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7EA3F3C2201099200A16660 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E7EA3F412201099200A16660 /* Best_Movies_TV.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Best_Movies_TV.xcdatamodel; sourceTree = "<group>"; };
+		E7EA3F442201099200A16660 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E7EA3F462201099400A16660 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E7EA3F482201099400A16660 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7EA3F4C22010A7D00A16660 /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
 		E7EFCAD221B6AE5000ECED0B /* Best Movies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Best Movies.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7EFCAD521B6AE5100ECED0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7EFCADD21B6AE5100ECED0B /* Best_Movies.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Best_Movies.xcdatamodel; sourceTree = "<group>"; };
@@ -103,32 +170,43 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E7EA3F372201099200A16660 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85A323473367C8B05436D6FD /* Pods_Best_Movies_TV.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E7EFCACF21B6AE5000ECED0B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDD41D8284EF93221A47421F /* Pods_Best_Movies.framework in Frameworks */,
+				36AD8ED588596F8DEEC50CA8 /* Pods_Best_Movies.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		353258A66DD9D6EB2C801B36 /* Frameworks */ = {
+		4F951BECB1146E8B3B4C915D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				DBDF55B62F8131C1D866F41F /* Pods_Best_Movies.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		3EA54DA55C82F3558F8AC9C8 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				B9C36673E046BCE6F952F19C /* Pods-Best Movies.debug.xcconfig */,
-				72ACE08CD784B2F015591627 /* Pods-Best Movies.release.xcconfig */,
+				22C2FCE2D5244165BA080A32 /* Pods-Best Movies.debug.xcconfig */,
+				C80E9E2C721D6E2D29F35AE6 /* Pods-Best Movies.release.xcconfig */,
+				A1AFBFC2CBA03D6F0BAFC40E /* Pods-Best Movies TV.debug.xcconfig */,
+				8C3F658207758DA6599D8A85 /* Pods-Best Movies TV.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		AE59E2B45139D710D9729A58 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8DE56AACCC633E6856FBE3D6 /* Pods_Best_Movies.framework */,
+				D483B076955286943906ACB9 /* Pods_Best_Movies_TV.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		E702EC0021BDDB210043E5EF /* FavoritesMovies */ = {
@@ -173,6 +251,49 @@
 			path = Database;
 			sourceTree = "<group>";
 		};
+		E72A05C7220A5BEB004FEC7A /* MoviesDescription */ = {
+			isa = PBXGroup;
+			children = (
+				E72A05C8220A5FE0004FEC7A /* View */,
+				E72A05C9220A5FFD004FEC7A /* Presenter */,
+			);
+			path = MoviesDescription;
+			sourceTree = "<group>";
+		};
+		E72A05C8220A5FE0004FEC7A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E72A05CA220A602D004FEC7A /* MoviesTVDescriptionViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E72A05C9220A5FFD004FEC7A /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E72A05CC220A6048004FEC7A /* MoviesTVDescriptionPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		E72A05D0220A6A62004FEC7A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E72A05D7220A6A71004FEC7A /* BebasKai.otf */,
+				E72A05DA220A6A72004FEC7A /* Lato-Black.ttf */,
+				E72A05D9220A6A71004FEC7A /* Lato-BlackItalic.ttf */,
+				E72A05D3220A6A70004FEC7A /* Lato-Bold.ttf */,
+				E72A05D1220A6A6F004FEC7A /* Lato-BoldItalic.ttf */,
+				E72A05D5220A6A70004FEC7A /* Lato-Hairline.ttf */,
+				E72A05DB220A6A72004FEC7A /* Lato-HairlineItalic.ttf */,
+				E72A05D6220A6A70004FEC7A /* Lato-Italic.ttf */,
+				E72A05D4220A6A70004FEC7A /* Lato-Light.ttf */,
+				E72A05D2220A6A6F004FEC7A /* Lato-LightItalic.ttf */,
+				E72A05D8220A6A71004FEC7A /* Lato-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		E79362CD21B98DC700331098 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +322,91 @@
 				E797AA4721BF81130090E7F1 /* error_cross.json */,
 				E7E7B66521B85C5900072C38 /* video_cam.json */,
 				E7687F2D21BEA90D0007C014 /* emoji_wink.json */,
+			);
+			path = LottieJSON;
+			sourceTree = "<group>";
+		};
+		E7D59F1A2201217F002E5320 /* Startup */ = {
+			isa = PBXGroup;
+			children = (
+				E7EA3F3C2201099200A16660 /* AppDelegate.swift */,
+			);
+			path = Startup;
+			sourceTree = "<group>";
+		};
+		E7D59F1B2201219E002E5320 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				E7EA3F402201099200A16660 /* Best_Movies_TV.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		E7D59F1C220121C7002E5320 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				E72A05D0220A6A62004FEC7A /* Fonts */,
+				E7D59F26220129DE002E5320 /* LottieJSON */,
+				E7EA3F462201099400A16660 /* Assets.xcassets */,
+				E7EA3F482201099400A16660 /* Info.plist */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		E7D59F1D220121F1002E5320 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				E7D59F1E22012212002E5320 /* HomeMovies */,
+				E72A05C7220A5BEB004FEC7A /* MoviesDescription */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		E7D59F1E22012212002E5320 /* HomeMovies */ = {
+			isa = PBXGroup;
+			children = (
+				E7D59F1F22012224002E5320 /* View */,
+				E7D59F202201222C002E5320 /* Presenter */,
+			);
+			path = HomeMovies;
+			sourceTree = "<group>";
+		};
+		E7D59F1F22012224002E5320 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E7EA3F432201099200A16660 /* Main.storyboard */,
+				E7D59F1822011917002E5320 /* MoviesTVViewController.swift */,
+				E7D59F212201223C002E5320 /* MovieCell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E7D59F202201222C002E5320 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E7D59F2422012762002E5320 /* MoviesHomePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		E7D59F212201223C002E5320 /* MovieCell */ = {
+			isa = PBXGroup;
+			children = (
+				E7EA3F4C22010A7D00A16660 /* MovieCollectionViewCell.swift */,
+			);
+			path = MovieCell;
+			sourceTree = "<group>";
+		};
+		E7D59F26220129DE002E5320 /* LottieJSON */ = {
+			isa = PBXGroup;
+			children = (
+				E7D59F2822012A3D002E5320 /* emoji_wink.json */,
+				E7D59F2A22012A3E002E5320 /* error_cross.json */,
+				E7D59F2D22012A3E002E5320 /* favourite_app_icon.json */,
+				E7D59F2722012A3D002E5320 /* loader.json */,
+				E7D59F2B22012A3E002E5320 /* no_connection.json */,
+				E7D59F2922012A3D002E5320 /* search.json */,
+				E7D59F2C22012A3E002E5320 /* video_cam.json */,
 			);
 			path = LottieJSON;
 			sourceTree = "<group>";
@@ -238,13 +444,25 @@
 			path = MovieCell;
 			sourceTree = "<group>";
 		};
+		E7EA3F3B2201099200A16660 /* Best Movies TV */ = {
+			isa = PBXGroup;
+			children = (
+				E7D59F1A2201217F002E5320 /* Startup */,
+				E7D59F1B2201219E002E5320 /* CoreData */,
+				E7D59F1C220121C7002E5320 /* Resource */,
+				E7D59F1D220121F1002E5320 /* Source */,
+			);
+			path = "Best Movies TV";
+			sourceTree = "<group>";
+		};
 		E7EFCAC921B6AE5000ECED0B = {
 			isa = PBXGroup;
 			children = (
 				E7EFCAD421B6AE5100ECED0B /* Best Movies */,
+				E7EA3F3B2201099200A16660 /* Best Movies TV */,
 				E7EFCAD321B6AE5000ECED0B /* Products */,
-				3EA54DA55C82F3558F8AC9C8 /* Pods */,
-				353258A66DD9D6EB2C801B36 /* Frameworks */,
+				4F951BECB1146E8B3B4C915D /* Pods */,
+				AE59E2B45139D710D9729A58 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -252,6 +470,7 @@
 			isa = PBXGroup;
 			children = (
 				E7EFCAD221B6AE5000ECED0B /* Best Movies.app */,
+				E7EA3F3A2201099200A16660 /* Best Movies TV.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -378,15 +597,34 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		E7EA3F392201099200A16660 /* Best Movies TV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7EA3F4B2201099400A16660 /* Build configuration list for PBXNativeTarget "Best Movies TV" */;
+			buildPhases = (
+				A7D017B050983DCE81E4F07A /* [CP] Check Pods Manifest.lock */,
+				E7EA3F362201099200A16660 /* Sources */,
+				E7EA3F372201099200A16660 /* Frameworks */,
+				E7EA3F382201099200A16660 /* Resources */,
+				0DB36896DB50983424F7A0BC /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Best Movies TV";
+			productName = "Best Movies TV";
+			productReference = E7EA3F3A2201099200A16660 /* Best Movies TV.app */;
+			productType = "com.apple.product-type.application";
+		};
 		E7EFCAD121B6AE5000ECED0B /* Best Movies */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E7EFCAE721B6AE5200ECED0B /* Build configuration list for PBXNativeTarget "Best Movies" */;
 			buildPhases = (
-				8E5ECC497A2E19713223AC82 /* [CP] Check Pods Manifest.lock */,
+				49DE6CC4B81E7D117C89F300 /* [CP] Check Pods Manifest.lock */,
 				E7EFCACE21B6AE5000ECED0B /* Sources */,
 				E7EFCACF21B6AE5000ECED0B /* Frameworks */,
 				E7EFCAD021B6AE5000ECED0B /* Resources */,
-				6AEC4715DDA5A86E321D3434 /* [CP] Embed Pods Frameworks */,
+				2DAE4B0D2B71978B3FECFBC1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -407,6 +645,9 @@
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "Vitor Maura";
 				TargetAttributes = {
+					E7EA3F392201099200A16660 = {
+						CreatedOnToolsVersion = 10.0;
+					};
 					E7EFCAD121B6AE5000ECED0B = {
 						CreatedOnToolsVersion = 10.0;
 					};
@@ -426,11 +667,39 @@
 			projectRoot = "";
 			targets = (
 				E7EFCAD121B6AE5000ECED0B /* Best Movies */,
+				E7EA3F392201099200A16660 /* Best Movies TV */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E7EA3F382201099200A16660 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E72A05E4220A6A72004FEC7A /* Lato-BlackItalic.ttf in Resources */,
+				E7D59F2E22012A3E002E5320 /* loader.json in Resources */,
+				E72A05E2220A6A72004FEC7A /* BebasKai.otf in Resources */,
+				E7EA3F472201099400A16660 /* Assets.xcassets in Resources */,
+				E7D59F3422012A3E002E5320 /* favourite_app_icon.json in Resources */,
+				E7D59F3022012A3E002E5320 /* search.json in Resources */,
+				E72A05DC220A6A72004FEC7A /* Lato-BoldItalic.ttf in Resources */,
+				E72A05DE220A6A72004FEC7A /* Lato-Bold.ttf in Resources */,
+				E72A05E5220A6A72004FEC7A /* Lato-Black.ttf in Resources */,
+				E7D59F3122012A3E002E5320 /* error_cross.json in Resources */,
+				E72A05E6220A6A72004FEC7A /* Lato-HairlineItalic.ttf in Resources */,
+				E72A05DD220A6A72004FEC7A /* Lato-LightItalic.ttf in Resources */,
+				E7EA3F452201099200A16660 /* Main.storyboard in Resources */,
+				E7D59F3322012A3E002E5320 /* video_cam.json in Resources */,
+				E72A05E0220A6A72004FEC7A /* Lato-Hairline.ttf in Resources */,
+				E72A05E3220A6A72004FEC7A /* Lato-Regular.ttf in Resources */,
+				E7D59F2F22012A3E002E5320 /* emoji_wink.json in Resources */,
+				E7D59F3222012A3E002E5320 /* no_connection.json in Resources */,
+				E72A05E1220A6A72004FEC7A /* Lato-Italic.ttf in Resources */,
+				E72A05DF220A6A72004FEC7A /* Lato-Light.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E7EFCAD021B6AE5000ECED0B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -462,23 +731,43 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6AEC4715DDA5A86E321D3434 /* [CP] Embed Pods Frameworks */ = {
+		0DB36896DB50983424F7A0BC /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Best Movies TV/Pods-Best Movies TV-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire-tvOS/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher-tvOS/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Spruce-tvOS/Spruce.framework",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios-tvOS/Lottie.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Spruce.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Best Movies TV/Pods-Best Movies TV-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2DAE4B0D2B71978B3FECFBC1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Best Movies/Pods-Best Movies-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
-				"${BUILT_PRODUCTS_DIR}/Spruce/Spruce.framework",
-				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire-iOS/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher-iOS/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Spruce-iOS/Spruce.framework",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios-iOS/Lottie.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
@@ -490,22 +779,36 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Best Movies/Pods-Best Movies-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8E5ECC497A2E19713223AC82 /* [CP] Check Pods Manifest.lock */ = {
+		49DE6CC4B81E7D117C89F300 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Best Movies-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A7D017B050983DCE81E4F07A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Best Movies TV-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -515,6 +818,27 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E7EA3F362201099200A16660 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E72A05CD220A6048004FEC7A /* MoviesTVDescriptionPresenter.swift in Sources */,
+				E7D59F14220113BC002E5320 /* MovieGenres.swift in Sources */,
+				E72A05E7220A73F7004FEC7A /* ExtensionUIView.swift in Sources */,
+				E7D59F2522012762002E5320 /* MoviesHomePresenter.swift in Sources */,
+				E7EA3F4E22010AA600A16660 /* SLMain.swift in Sources */,
+				E7D59F13220113BA002E5320 /* FavoriteMovie.swift in Sources */,
+				E7EA3F422201099200A16660 /* Best_Movies_TV.xcdatamodeld in Sources */,
+				E7EA3F4F22010AB000A16660 /* PopularMovies.swift in Sources */,
+				E7D59F1922011917002E5320 /* MoviesTVViewController.swift in Sources */,
+				E7EA3F3D2201099200A16660 /* AppDelegate.swift in Sources */,
+				E7EA3F4D22010A7D00A16660 /* MovieCollectionViewCell.swift in Sources */,
+				E7D59F16220113C9002E5320 /* Reachability.swift in Sources */,
+				E72A05CB220A602D004FEC7A /* MoviesTVDescriptionViewController.swift in Sources */,
+				E7D59F15220113C7002E5320 /* ErrorService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E7EFCACE21B6AE5000ECED0B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -546,6 +870,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		E7EA3F432201099200A16660 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E7EA3F442201099200A16660 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		E7EFCAE121B6AE5200ECED0B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -557,6 +889,50 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		E7EA3F492201099400A16660 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1AFBFC2CBA03D6F0BAFC40E /* Pods-Best Movies TV.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Launch Image";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MM4VF9A7LR;
+				INFOPLIST_FILE = "/Users/vitormaura/Desktop/Best Movies/Best Movies TV/Resource/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vitormaura.Best-Movies-TV";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 12.0;
+			};
+			name = Debug;
+		};
+		E7EA3F4A2201099400A16660 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C3F658207758DA6599D8A85 /* Pods-Best Movies TV.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Launch Image";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MM4VF9A7LR;
+				INFOPLIST_FILE = "/Users/vitormaura/Desktop/Best Movies/Best Movies TV/Resource/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vitormaura.Best-Movies-TV";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 12.0;
+			};
+			name = Release;
+		};
 		E7EFCAE521B6AE5200ECED0B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -675,12 +1051,13 @@
 		};
 		E7EFCAE821B6AE5200ECED0B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B9C36673E046BCE6F952F19C /* Pods-Best Movies.debug.xcconfig */;
+			baseConfigurationReference = 22C2FCE2D5244165BA080A32 /* Pods-Best Movies.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MM4VF9A7LR;
 				INFOPLIST_FILE = "Best Movies/Resource/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -694,12 +1071,13 @@
 		};
 		E7EFCAE921B6AE5200ECED0B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 72ACE08CD784B2F015591627 /* Pods-Best Movies.release.xcconfig */;
+			baseConfigurationReference = C80E9E2C721D6E2D29F35AE6 /* Pods-Best Movies.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MM4VF9A7LR;
 				INFOPLIST_FILE = "Best Movies/Resource/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -714,6 +1092,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E7EA3F4B2201099400A16660 /* Build configuration list for PBXNativeTarget "Best Movies TV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7EA3F492201099400A16660 /* Debug */,
+				E7EA3F4A2201099400A16660 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E7EFCACD21B6AE5000ECED0B /* Build configuration list for PBXProject "Best Movies" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -735,6 +1122,16 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
+		E7EA3F402201099200A16660 /* Best_Movies_TV.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E7EA3F412201099200A16660 /* Best_Movies_TV.xcdatamodel */,
+			);
+			currentVersion = E7EA3F412201099200A16660 /* Best_Movies_TV.xcdatamodel */;
+			path = Best_Movies_TV.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
 		E7EFCADC21B6AE5100ECED0B /* Best_Movies.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (

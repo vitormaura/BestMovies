@@ -1,0 +1,6 @@
+framework module Pods_Best_Movies_TV {
+  umbrella header "Pods-Best Movies TV-umbrella.h"
+
+  export *
+  module * { export * }
+}

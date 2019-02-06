@@ -1,8 +1,6 @@
-platform :ios, '10.0'
-
-use_frameworks!
-
-def shared_pods
+target 'Best Movies' do
+    use_frameworks!
+    platform :ios, '8.0'
     
     pod 'Alamofire'
     pod 'Kingfisher'
@@ -11,26 +9,32 @@ def shared_pods
     
 end
 
-target 'Best Movies' do
+target 'Best Movies TV' do
+    use_frameworks!
+    platform :tvos, '9.0'
     
-    shared_pods
+    pod 'Alamofire'
+    pod 'Kingfisher'
+    pod 'Spruce'
+    pod 'lottie-ios'
+    
     
 end
 
 post_install do |installer|
-    
-    installer.pods_project.targets.each do |target|
-        
-        target.build_configurations.each do |config|
-            
-            config.build_settings['EXPANDED_CODE_SIGN_IDENTITY'] = ""
-            
-            config.build_settings['CODE_SIGNING_REQUIRED'] = "NO"
-            
-            config.build_settings['CODE_SIGNING_ALLOWED'] = "NO"
-            
-        end
-        
-    end
-    
+
+installer.pods_project.targets.each do |target|
+
+target.build_configurations.each do |config|
+
+config.build_settings['EXPANDED_CODE_SIGN_IDENTITY'] = ""
+
+config.build_settings['CODE_SIGNING_REQUIRED'] = "NO"
+
+config.build_settings['CODE_SIGNING_ALLOWED'] = "NO"
+
+end
+
+end
+
 end

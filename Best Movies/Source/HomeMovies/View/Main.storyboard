@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bLO-XA-ej7">
-    <device id="retina6_1" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bLO-XA-ej7">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -28,7 +30,7 @@
             <objects>
                 <navigationController id="bLO-XA-ej7" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="5XA-Ey-MPl">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.57254901960000004" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="barTintColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="0.20382063356164384" colorSpace="custom" customColorSpace="sRGB"/>
@@ -70,14 +72,14 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeMoviesViewController" customModule="Best_Movies" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jo4-B3-nff">
-                                <rect key="frame" x="63" y="297.5" width="290" height="358"/>
+                                <rect key="frame" x="43.666666666666657" y="255.66666666666663" width="290" height="358"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="abQ-kS-jPz" customClass="LOTAnimationView">
-                                        <rect key="frame" x="5" y="8" width="278" height="275"/>
+                                        <rect key="frame" x="5" y="8.0000000000000284" width="278" height="275"/>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HFx-Fn-uuG">
                                         <rect key="frame" x="7" y="291" width="274" height="40"/>
@@ -104,7 +106,7 @@
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="A3K-08-dA2">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="25" minimumInteritemSpacing="10" sectionInsetReference="layoutMargins" id="At1-gN-SUQ">
                                     <size key="itemSize" width="190" height="357"/>
@@ -114,17 +116,17 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="o0u-3y-pu8" customClass="MovieCollectionViewCell" customModule="Best_Movies" customModuleProvider="target">
-                                        <rect key="frame" x="12" y="28" width="190" height="357"/>
+                                        <rect key="frame" x="92.666666666666671" y="28" width="190" height="357"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="190" height="357"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Zb-IS-Old">
-                                                    <rect key="frame" x="5" y="5" width="180" height="292.5"/>
+                                                    <rect key="frame" x="5" y="5" width="180" height="292.66666666666669"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rge-sK-318">
-                                                            <rect key="frame" x="0.0" y="0.0" width="180" height="284.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="180" height="284.66666666666669"/>
                                                         </imageView>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jhq-ED-Ssq" customClass="LOTAnimationView">
                                                             <rect key="frame" x="120" y="5" width="60" height="60"/>
@@ -148,7 +150,7 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o2X-iZ-Tup" customClass="LOTAnimationView">
-                                                            <rect key="frame" x="10" y="91.5" width="150" height="110"/>
+                                                            <rect key="frame" x="10" y="91.666666666666686" width="150" height="110"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="110" id="DtY-yt-RjL"/>
                                                                 <constraint firstAttribute="width" constant="150" id="xgA-MX-fpe"/>
@@ -180,10 +182,10 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XC6-ji-JrT">
-                                                    <rect key="frame" x="5" y="292.5" width="180" height="50"/>
+                                                    <rect key="frame" x="5" y="292.66666666666669" width="180" height="50"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filme" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="mZz-pQ-Q4y">
-                                                            <rect key="frame" x="5" y="2" width="170" height="46"/>
+                                                            <rect key="frame" x="5" y="2.6666666666666856" width="170" height="46"/>
                                                             <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="14"/>
                                                             <nil key="highlightedColor"/>
                                                             <size key="shadowOffset" width="0.0" height="0.0"/>
@@ -267,11 +269,11 @@
             <objects>
                 <viewController id="aXi-Oh-fb3" customClass="FavoritesMoviesViewController" customModule="Best_Movies" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iJ8-8b-sOi">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IQo-cx-oD4" customClass="LOTAnimationView">
-                                <rect key="frame" x="83" y="351" width="248" height="251"/>
+                                <rect key="frame" x="63.666666666666657" y="309" width="247.99999999999997" height="251"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8vl-SS-Y2G">
                                         <rect key="frame" x="5" y="220" width="238" height="45"/>
@@ -298,10 +300,10 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="202" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="yr5-lm-NNt">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <searchBar key="tableHeaderView" contentMode="redraw" searchBarStyle="minimal" placeholder="Search..." id="abA-wd-PCC">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     <textInputTraits key="textInputTraits"/>
                                     <connections>
@@ -310,32 +312,32 @@
                                 </searchBar>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="202" id="D0p-sr-YFx" customClass="FavoriteMovieTableViewCell" customModule="Best_Movies" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="84" width="414" height="202"/>
+                                        <rect key="frame" x="0.0" y="84" width="375" height="202"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="D0p-sr-YFx" id="lJq-8j-mQn">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="202"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="202"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cQT-sF-TIb">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="202"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="202"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d0i-qJ-8zj">
-                                                            <rect key="frame" x="10" y="10" width="394" height="182"/>
+                                                            <rect key="frame" x="10" y="10" width="355" height="182"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="3AT-HJ-hc3">
-                                                                    <rect key="frame" x="114" y="30" width="270" height="142"/>
+                                                                    <rect key="frame" x="114" y="30" width="231" height="142"/>
                                                                     <subviews>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IJq-Ap-gX1">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="270" height="20.5"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="231" height="20.666666666666668"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome Filme" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYy-fs-T6T">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="135" height="20.5"/>
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="115.66666666666667" height="20.666666666666668"/>
                                                                                     <fontDescription key="fontDescription" name="BebasKai" family="Bebas Kai" pointSize="17"/>
                                                                                     <nil key="textColor"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00/00/0000" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hnP-ug-QQV">
-                                                                                    <rect key="frame" x="135" y="0.0" width="135" height="20.5"/>
+                                                                                    <rect key="frame" x="115.66666666666666" y="0.0" width="115.33333333333334" height="20.666666666666668"/>
                                                                                     <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="12"/>
                                                                                     <nil key="textColor"/>
                                                                                     <nil key="highlightedColor"/>
@@ -343,7 +345,7 @@
                                                                             </subviews>
                                                                         </stackView>
                                                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OIU-Pi-T84">
-                                                                            <rect key="frame" x="0.0" y="20.5" width="270" height="121.5"/>
+                                                                            <rect key="frame" x="0.0" y="20.666666666666664" width="231" height="121.33333333333334"/>
                                                                             <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore</string>
                                                                             <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -376,7 +378,7 @@
                                                                     </userDefinedRuntimeAttributes>
                                                                 </imageView>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0RT-oJ-7OJ" customClass="LOTAnimationView">
-                                                                    <rect key="frame" x="21.5" y="71" width="75" height="50"/>
+                                                                    <rect key="frame" x="21.666666666666671" y="71" width="75" height="50"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="75" id="Vg6-qt-hJY"/>
                                                                         <constraint firstAttribute="height" constant="50" id="tMD-vb-v6G"/>
@@ -475,20 +477,20 @@
             <objects>
                 <viewController id="FTi-7y-5Ej" customClass="MoviesDescriptionViewController" customModule="Best_Movies" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PKc-rQ-saE" customClass="MoviesDes">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d7q-rI-kXh">
-                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
+                                <rect key="frame" x="0.0" y="140" width="375" height="638"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eC8-Ja-g8U">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="238.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="210.66666666666666"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8xA-8q-Inf">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="238.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="210.66666666666666"/>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v4K-Na-V3G" customClass="LOTAnimationView">
-                                                <rect key="frame" x="132" y="64" width="150" height="110"/>
+                                                <rect key="frame" x="113" y="50.333333333333343" width="150" height="110"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="110" id="HR5-Qq-lIl"/>
                                                     <constraint firstAttribute="width" constant="150" id="fC3-Xp-RG8"/>
@@ -506,7 +508,7 @@
                                         </constraints>
                                     </view>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="g5m-2o-bRX">
-                                        <rect key="frame" x="8" y="262" width="145" height="238"/>
+                                        <rect key="frame" x="8" y="234.33333333333331" width="131.66666666666666" height="210"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
                                                 <real key="value" value="1"/>
@@ -523,28 +525,28 @@
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UyW-PD-aQk">
-                                        <rect key="frame" x="161" y="262" width="245" height="440"/>
+                                        <rect key="frame" x="147.66666666666663" y="234.33333333333329" width="219.33333333333337" height="383.66666666666674"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7.9" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qsh-wg-Hsg">
-                                                <rect key="frame" x="11" y="2" width="59" height="50.5"/>
+                                                <rect key="frame" x="11.666666666666686" y="2" width="59" height="50.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="42"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lancamento: 00/00/000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lq7-j6-4uw">
-                                                <rect key="frame" x="11" y="57" width="234" height="18"/>
+                                                <rect key="frame" x="11.666666666666686" y="57" width="208.66666666666666" height="18"/>
                                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Romance, Drama" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56L-BN-S3o">
-                                                <rect key="frame" x="11" y="79" width="234" height="18"/>
+                                                <rect key="frame" x="11.666666666666686" y="79" width="208.66666666666666" height="18"/>
                                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="0tn-IQ-QeJ">
-                                                <rect key="frame" x="7" y="107" width="230" height="324"/>
+                                                <rect key="frame" x="7.6666666666666856" y="107" width="204.66666666666666" height="267.66666666666669"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
@@ -583,7 +585,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="38k-NP-DDd" customClass="LOTAnimationView">
-                                        <rect key="frame" x="30" y="519" width="100" height="100"/>
+                                        <rect key="frame" x="30" y="463.33333333333337" width="100" height="100"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="UPE-sw-vLv"/>
@@ -591,7 +593,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AuY-tg-Vgj" customClass="LOTAnimationView">
-                                        <rect key="frame" x="20.5" y="341" width="120" height="80"/>
+                                        <rect key="frame" x="13.666666666666671" y="299.66666666666669" width="120.00000000000001" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="120" id="cZV-Ez-AIy"/>
                                             <constraint firstAttribute="height" constant="80" id="ohe-zL-jC2"/>

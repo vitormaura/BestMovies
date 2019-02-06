@@ -2,6 +2,7 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14315.18" systemVersion="18A391" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="FavoriteGenresDatabase" representedClassName="FavoriteGenresDatabase" syncable="YES" codeGenerationType="class">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="genres" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FavoriteMovieDatabase" inverseName="genres" inverseEntity="FavoriteMovieDatabase" syncable="YES"/>
     </entity>
     <entity name="FavoriteMovieDatabase" representedClassName="FavoriteMovieDatabase" syncable="YES" codeGenerationType="class">
         <attribute name="date" optional="YES" attributeType="String" syncable="YES"/>
@@ -13,10 +14,10 @@
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="urlCover" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="urlPoster" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="genres" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FavoriteGenresDatabase" syncable="YES"/>
+        <relationship name="genres" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FavoriteGenresDatabase" inverseName="genres" inverseEntity="FavoriteGenresDatabase" syncable="YES"/>
     </entity>
     <elements>
+        <element name="FavoriteGenresDatabase" positionX="145.96875" positionY="-70.37890625" width="128" height="73"/>
         <element name="FavoriteMovieDatabase" positionX="-54" positionY="-81" width="128" height="193"/>
-        <element name="FavoriteGenresDatabase" positionX="115.7265625" positionY="-79.90625" width="128" height="58"/>
     </elements>
 </model>
