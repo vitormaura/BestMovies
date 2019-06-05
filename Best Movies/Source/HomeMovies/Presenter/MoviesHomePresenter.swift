@@ -31,6 +31,7 @@ struct MovieViewData {
     var releaseDate = ""
     var urlImage = ""
     var urlPoster = ""
+    var movieID = 0
     var description = ""
     var gen_ids = [Int]()
     var vote_average = 0.0
@@ -127,6 +128,7 @@ extension MoviesHomePresenter{
             movieViewData.releaseDate = movie.release_date ?? ""
             movieViewData.urlImage = "https://image.tmdb.org/t/p/w500\(movie.poster_path ?? "")"
             movieViewData.urlPoster = "https://image.tmdb.org/t/p/w500\(movie.backdrop_path ?? "")"
+            movieViewData.movieID = movie.id ?? 0
             movieViewData.description = movie.overview ?? ""
             movieViewData.genres = self.getGenresForViewData(movie.genre_ids ?? [])
             movieViewData.vote_average = movie.vote_average ?? 0

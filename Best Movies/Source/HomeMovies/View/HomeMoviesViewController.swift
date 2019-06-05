@@ -38,6 +38,7 @@ extension HomeMoviesViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.moviesCollectionView.reloadData()
+        self.setupNavBar()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -174,5 +175,10 @@ extension HomeMoviesViewController {
             HapticAlerts.hapticReturnLight()
            self.presenter.getMovies(page: currentPage)
         }
+    }
+    
+    func setupNavBar() {
+        self.navigationController?.navigationBar.barTintColor = nil
+        self.navigationController?.navigationBar.layer.shadowColor = UIColor(red: 146/255, green: 0/255, blue: 255/255, alpha: 1.0).cgColor
     }
 }

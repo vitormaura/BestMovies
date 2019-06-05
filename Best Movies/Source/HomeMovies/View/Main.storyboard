@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bLO-XA-ej7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bLO-XA-ej7">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -55,7 +54,7 @@
                                 <size key="value" width="0.0" height="2"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                <color key="value" red="0.57254901960000004" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="value" red="0.57449334859848022" green="0.11002471297979355" blue="0.9624829888343811" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </navigationBar>
@@ -150,7 +149,7 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o2X-iZ-Tup" customClass="LOTAnimationView">
-                                                            <rect key="frame" x="10" y="91.666666666666686" width="150" height="110"/>
+                                                            <rect key="frame" x="10" y="91.333333333333314" width="150" height="110"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="110" id="DtY-yt-RjL"/>
                                                                 <constraint firstAttribute="width" constant="150" id="xgA-MX-fpe"/>
@@ -185,7 +184,7 @@
                                                     <rect key="frame" x="5" y="292.66666666666669" width="180" height="50"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filme" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="mZz-pQ-Q4y">
-                                                            <rect key="frame" x="5" y="2.6666666666666856" width="170" height="46"/>
+                                                            <rect key="frame" x="5" y="2" width="170" height="46"/>
                                                             <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="14"/>
                                                             <nil key="highlightedColor"/>
                                                             <size key="shadowOffset" width="0.0" height="0.0"/>
@@ -490,14 +489,13 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="210.66666666666666"/>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v4K-Na-V3G" customClass="LOTAnimationView">
-                                                <rect key="frame" x="113" y="50.333333333333343" width="150" height="110"/>
+                                                <rect key="frame" x="112.66666666666669" y="50.333333333333343" width="150" height="110"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="110" id="HR5-Qq-lIl"/>
                                                     <constraint firstAttribute="width" constant="150" id="fC3-Xp-RG8"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="8xA-8q-Inf" firstAttribute="leading" secondItem="eC8-Ja-g8U" secondAttribute="leading" id="5Ta-Vy-Csb"/>
                                             <constraint firstItem="v4K-Na-V3G" firstAttribute="centerY" secondItem="8xA-8q-Inf" secondAttribute="centerY" id="8Ha-JV-zEh"/>
@@ -508,7 +506,7 @@
                                         </constraints>
                                     </view>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="g5m-2o-bRX">
-                                        <rect key="frame" x="8" y="234.33333333333331" width="131.66666666666666" height="210"/>
+                                        <rect key="frame" x="8" y="234" width="131.33333333333334" height="210.66666666666663"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
                                                 <real key="value" value="1"/>
@@ -525,29 +523,28 @@
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UyW-PD-aQk">
-                                        <rect key="frame" x="147.66666666666663" y="234.33333333333329" width="219.33333333333337" height="383.66666666666674"/>
+                                        <rect key="frame" x="147.33333333333337" y="234" width="219.66666666666663" height="384"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7.9" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qsh-wg-Hsg">
-                                                <rect key="frame" x="11.666666666666686" y="2" width="59" height="50.333333333333336"/>
+                                                <rect key="frame" x="11" y="2" width="59" height="50.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="42"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lancamento: 00/00/000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lq7-j6-4uw">
-                                                <rect key="frame" x="11.666666666666686" y="57" width="208.66666666666666" height="18"/>
+                                                <rect key="frame" x="11" y="57" width="208.66666666666666" height="18"/>
                                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Romance, Drama" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56L-BN-S3o">
-                                                <rect key="frame" x="11.666666666666686" y="79" width="208.66666666666666" height="18"/>
+                                                <rect key="frame" x="11" y="79" width="208.66666666666666" height="18"/>
                                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="0tn-IQ-QeJ">
-                                                <rect key="frame" x="7.6666666666666856" y="107" width="204.66666666666666" height="267.66666666666669"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <rect key="frame" x="7" y="107" width="204.66666666666666" height="268"/>
                                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -585,15 +582,14 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="38k-NP-DDd" customClass="LOTAnimationView">
-                                        <rect key="frame" x="30" y="463.33333333333337" width="100" height="100"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <rect key="frame" x="30" y="463.66666666666663" width="100" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="UPE-sw-vLv"/>
                                             <constraint firstAttribute="height" constant="100" id="lpd-EQ-Xaj"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AuY-tg-Vgj" customClass="LOTAnimationView">
-                                        <rect key="frame" x="13.666666666666671" y="299.66666666666669" width="120.00000000000001" height="80"/>
+                                        <rect key="frame" x="13.666666666666671" y="299.33333333333331" width="120.00000000000001" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="120" id="cZV-Ez-AIy"/>
                                             <constraint firstAttribute="height" constant="80" id="ohe-zL-jC2"/>
@@ -635,6 +631,7 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="T8t-bh-NMl"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="bottomView" destination="d7q-rI-kXh" id="lQ8-IC-smP"/>
                         <outlet property="favoriteView" destination="38k-NP-DDd" id="2BC-Jr-n9g"/>
                         <outlet property="imageCover" destination="g5m-2o-bRX" id="W0e-eH-v8a"/>
                         <outlet property="imagePoster" destination="8xA-8q-Inf" id="rK0-Nf-zr5"/>
@@ -644,6 +641,7 @@
                         <outlet property="loadingCover" destination="AuY-tg-Vgj" id="dle-sH-emo"/>
                         <outlet property="loadingPoster" destination="v4K-Na-V3G" id="I5O-tu-L82"/>
                         <outlet property="textDescription" destination="0tn-IQ-QeJ" id="vOf-AL-LG2"/>
+                        <outlet property="textView" destination="UyW-PD-aQk" id="jRJ-1S-3Py"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w6O-d8-eFN" userLabel="First Responder" sceneMemberID="firstResponder"/>

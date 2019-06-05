@@ -64,6 +64,12 @@ extension MoviesTVViewController: UICollectionViewDelegate {
         }
     }
     
+    func collectionView(_ collectionView: UICollectionView, didUpdateFocusIn context: UICollectionViewFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
+        guard let cell = collectionView.cellForItem(at: context.nextFocusedIndexPath ?? IndexPath()) as? MovieCollectionViewCell else { return }
+        guard let image = cell.movieImage.image else { return }
+        self.getColors(image: image)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: "homeSegue", sender: indexPath.row)
     }
@@ -138,6 +144,14 @@ extension MoviesTVViewController {
             let viewController = segue.destination as! MoviesTVDescriptionViewController
             viewController.viewData = self.viewData.movieList[sender as! Int]
             viewController.genreViewData = self.genreViewData
+        }
+    }
+    
+    private func getColors(image: UIImage) {
+        image.getColors { (colors) in
+            UIView.animate(withDuration: 0.4, animations: {
+                self.view.backgroundColor = colors.background
+            })
         }
     }
 }

@@ -24,6 +24,14 @@ class FavoriteMovieTableViewCell: UITableViewCell {
     }
 }
 
+//MARK: - OVERRIDE METHODS -
+extension FavoriteMovieTableViewCell {
+    override func prepareForReuse() {
+        self.imageCover.image = nil
+        self.imageCover.kf.cancelDownloadTask()
+    }
+}
+
 //MARK: - AUX METHODS -
 extension FavoriteMovieTableViewCell {
     func prepare(_ viewData: FavoriteMovieViewData){

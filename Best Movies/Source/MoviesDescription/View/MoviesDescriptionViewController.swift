@@ -12,6 +12,8 @@ import Lottie
 class MoviesDescriptionViewController: UIViewController {
     
     //MARK: - OUTLETS -
+    @IBOutlet weak var bottomView: UIView!
+    @IBOutlet weak var textView: UIView!
     @IBOutlet weak var imagePoster: UIImageView!
     @IBOutlet weak var imageCover: UIImageView!
     @IBOutlet weak var labelDate: UILabel!
@@ -70,6 +72,9 @@ extension MoviesDescriptionViewController: MoviesDescriptionDelegate{
     
     func setImage(_ imageView: UIImageView, _ image: UIImage) {
         imageView.image = image
+        if self.imagePoster.image == image{
+            self.getColors(image: image)
+        }
     }
 }
 
@@ -117,5 +122,27 @@ extension MoviesDescriptionViewController {
         if self.presenter.checkFavovite(title: viewData.titleMovie){
             self.favoriteView.play()
         }
+    }
+    
+    func getColors(image: UIImage) {
+        image.getColors { (colors) in
+            UIView.animate(withDuration: 0.4, animations: {
+                self.view.backgroundColor = colors.background
+                self.bottomView.backgroundColor = colors.background
+                self.textView.backgroundColor = colors.background
+                self.navigationController?.navigationBar.barTintColor = colors.background
+                self.navigationController?.navigationBar.tintColor = colors.secondary
+                self.navigationController?.navigationBar.shadowColor = colors.secondary
+                self.setLabelColors(colors)
+            })
+        }
+    }
+    
+    func setLabelColors(_ colors: UIImageColors) {
+        self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "BebasKai", size: 27.0)!, NSAttributedString.Key.foregroundColor : colors.detail]
+        self.labelNote.textColor = colors.secondary
+        self.labelDate.textColor = colors.primary
+        self.labelGen.textColor = colors.primary
+        self.textDescription.textColor = colors.primary
     }
 }

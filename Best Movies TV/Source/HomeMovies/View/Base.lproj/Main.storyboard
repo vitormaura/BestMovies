@@ -191,7 +191,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7.9" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awV-pk-O9k">
-                                <rect key="frame" x="1530" y="68" width="154" height="174"/>
+                                <rect key="frame" x="1530" y="68" width="226" height="174"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="174" id="CtO-8Z-YL7"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="154" id="SK8-O0-M8g"/>
@@ -218,7 +218,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="awV-pk-O9k" firstAttribute="trailing" secondItem="Kkl-Iu-T70" secondAttribute="trailingMargin" constant="-126" id="1Ay-6K-4fO"/>
+                            <constraint firstItem="awV-pk-O9k" firstAttribute="trailing" secondItem="Kkl-Iu-T70" secondAttribute="trailingMargin" constant="-54" id="1Ay-6K-4fO"/>
                             <constraint firstItem="S0u-MP-fpo" firstAttribute="leading" secondItem="sjo-qT-0wB" secondAttribute="trailing" constant="29" id="2V2-Cr-eZV"/>
                             <constraint firstItem="awV-pk-O9k" firstAttribute="leading" secondItem="5yy-F0-SxF" secondAttribute="trailing" constant="612" id="5Ff-K2-wJH"/>
                             <constraint firstItem="sjo-qT-0wB" firstAttribute="leading" secondItem="Kkl-Iu-T70" secondAttribute="leadingMargin" id="H53-eP-0dW"/>
@@ -250,6 +250,7 @@
                         <outlet property="labelGen" destination="W85-aW-L54" id="LP6-Zf-aBf"/>
                         <outlet property="labelNote" destination="awV-pk-O9k" id="fvH-MV-HbQ"/>
                         <outlet property="labelTitle" destination="YJA-O1-fwj" id="u1E-a8-qR2"/>
+                        <outlet property="labelTitleGen" destination="VmB-LP-nFV" id="3Za-eR-9YT"/>
                         <outlet property="loadingView" destination="hvp-ZS-xM1" id="QZH-im-laV"/>
                         <outlet property="textDescription" destination="S0u-MP-fpo" id="eyC-qz-vi4"/>
                     </connections>

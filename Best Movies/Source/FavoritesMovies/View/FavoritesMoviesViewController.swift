@@ -35,6 +35,7 @@ extension FavoritesMoviesViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.presenter.getFavoriteListDataBase()
+        self.setupNavBar()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -148,5 +149,10 @@ extension FavoritesMoviesViewController: UISearchBarDelegate {
             self.emptyView.isHidden = true
             self.emptyView.pause()
         }
+    }
+    
+    func setupNavBar() {
+        self.navigationController?.navigationBar.barTintColor = nil
+        self.navigationController?.navigationBar.layer.shadowColor = UIColor(red: 146/255, green: 0/255, blue: 255/255, alpha: 1.0).cgColor
     }
 }

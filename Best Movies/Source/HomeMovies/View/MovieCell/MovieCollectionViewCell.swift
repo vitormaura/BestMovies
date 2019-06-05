@@ -22,6 +22,14 @@ class MovieCollectionViewCell: UICollectionViewCell {
     private let dataBase = FavoriteManager()
 }
 
+//MARK: - OVERRIDE METHODS -
+extension MovieCollectionViewCell {
+    override func prepareForReuse() {
+        self.imageMovie.image = nil
+        self.imageMovie.kf.cancelDownloadTask()
+    }
+}
+
 //MARK: - AUX METHODS -
 extension MovieCollectionViewCell {
     func prepare(viewData: MovieViewData){

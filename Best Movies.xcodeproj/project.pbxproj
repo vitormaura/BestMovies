@@ -33,6 +33,8 @@
 		E72A05E6220A6A72004FEC7A /* Lato-HairlineItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E72A05DB220A6A72004FEC7A /* Lato-HairlineItalic.ttf */; };
 		E72A05E7220A73F7004FEC7A /* ExtensionUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EFCB0221B76DDD00ECED0B /* ExtensionUIView.swift */; };
 		E7687F2E21BEA90D0007C014 /* emoji_wink.json in Resources */ = {isa = PBXBuildFile; fileRef = E7687F2D21BEA90D0007C014 /* emoji_wink.json */; };
+		E7794331220BBB3E00D73A84 /* ImageColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7794330220BBB3E00D73A84 /* ImageColors.swift */; };
+		E7794332220BD24D00D73A84 /* ImageColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7794330220BBB3E00D73A84 /* ImageColors.swift */; };
 		E797AA4621BF366D0090E7F1 /* MovieGenres.swift in Sources */ = {isa = PBXBuildFile; fileRef = E797AA4521BF366D0090E7F1 /* MovieGenres.swift */; };
 		E797AA4821BF81130090E7F1 /* error_cross.json in Resources */ = {isa = PBXBuildFile; fileRef = E797AA4721BF81130090E7F1 /* error_cross.json */; };
 		E797AA4A21BF87800090E7F1 /* HapticAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E797AA4921BF87800090E7F1 /* HapticAlerts.swift */; };
@@ -117,6 +119,7 @@
 		E72A05DA220A6A72004FEC7A /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
 		E72A05DB220A6A72004FEC7A /* Lato-HairlineItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-HairlineItalic.ttf"; sourceTree = "<group>"; };
 		E7687F2D21BEA90D0007C014 /* emoji_wink.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = emoji_wink.json; sourceTree = "<group>"; };
+		E7794330220BBB3E00D73A84 /* ImageColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageColors.swift; sourceTree = "<group>"; };
 		E797AA4521BF366D0090E7F1 /* MovieGenres.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieGenres.swift; sourceTree = "<group>"; };
 		E797AA4721BF81130090E7F1 /* error_cross.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = error_cross.json; sourceTree = "<group>"; };
 		E797AA4921BF87800090E7F1 /* HapticAlerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticAlerts.swift; sourceTree = "<group>"; };
@@ -294,6 +297,14 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		E779432F220BBAFE00D73A84 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				E7794330220BBB3E00D73A84 /* ImageColors.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		E79362CD21B98DC700331098 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -451,6 +462,7 @@
 				E7D59F1B2201219E002E5320 /* CoreData */,
 				E7D59F1C220121C7002E5320 /* Resource */,
 				E7D59F1D220121F1002E5320 /* Source */,
+				E779432F220BBAFE00D73A84 /* Helper */,
 			);
 			path = "Best Movies TV";
 			sourceTree = "<group>";
@@ -835,6 +847,7 @@
 				E7EA3F4D22010A7D00A16660 /* MovieCollectionViewCell.swift in Sources */,
 				E7D59F16220113C9002E5320 /* Reachability.swift in Sources */,
 				E72A05CB220A602D004FEC7A /* MoviesTVDescriptionViewController.swift in Sources */,
+				E7794331220BBB3E00D73A84 /* ImageColors.swift in Sources */,
 				E7D59F15220113C7002E5320 /* ErrorService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -864,6 +877,7 @@
 				E7E40CA821BB58FC00DA16F8 /* MoviesDescriptionViewController.swift in Sources */,
 				E7EFCAEB21B6AF7900ECED0B /* SLMain.swift in Sources */,
 				E702EC0B21BDE1E00043E5EF /* ImageHelper.swift in Sources */,
+				E7794332220BD24D00D73A84 /* ImageColors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

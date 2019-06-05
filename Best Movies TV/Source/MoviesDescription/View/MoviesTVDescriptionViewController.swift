@@ -17,6 +17,7 @@ class MoviesTVDescriptionViewController: UIViewController {
     @IBOutlet weak var imageCover: UIImageView!
     @IBOutlet weak var labelDate: UILabel!
     @IBOutlet weak var labelGen: UILabel!
+    @IBOutlet weak var labelTitleGen: UILabel!
     @IBOutlet weak var labelNote: UILabel!
     @IBOutlet weak var textDescription: UITextView!
     @IBOutlet weak var loadingView: LOTAnimationView!
@@ -63,6 +64,9 @@ extension MoviesTVDescriptionViewController: MoviesTVDescriptionDelegate{
     
     func setImage(_ imageView: UIImageView, _ image: UIImage) {
         imageView.image = image
+        if self.imageCover.image == image{
+           self.getColors(image: image)
+        }
     }
 }
 
@@ -93,5 +97,23 @@ extension MoviesTVDescriptionViewController {
         self.textDescription.showsVerticalScrollIndicator = true;
         self.textDescription.bounces = true;
         self.textDescription.panGestureRecognizer.allowedTouchTypes = [NSNumber(value: UITouch.TouchType.indirect.rawValue)]
+    }
+    
+    func getColors(image: UIImage) {
+        image.getColors { (colors) in
+            UIView.animate(withDuration: 0.4, animations: {
+                self.view.backgroundColor = colors.background
+                self.setLabelColors(colors)
+            })
+        }
+    }
+    
+    func setLabelColors(_ colors: UIImageColors) {
+        self.labelTitle.textColor = colors.detail
+        self.labelNote.textColor = colors.secondary
+        self.labelDate.textColor = colors.primary
+        self.labelGen.textColor = colors.primary
+        self.labelTitleGen.textColor = colors.secondary
+        self.textDescription.textColor = colors.primary
     }
 }
