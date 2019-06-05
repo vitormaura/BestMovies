@@ -14,7 +14,7 @@ class MoviesService {
     let urlMovies = "https://api.themoviedb.org/3/movie/popular"
     let urlGenres = "https://api.themoviedb.org/3/genre/movie/list"
     let api_Key = "e65a4e0038c43c31f8acd19351a625ba"
-    let language = Locale.current.languageCode ?? "en-US"
+    let language =  Locale.current.collatorIdentifier ?? "en-US"
     
     func getMovies(page: Int, completionSuccess: @escaping (_ model:PopularMovies) -> Void, completionError: @escaping (_ error:ErrorType?) -> Void){
         

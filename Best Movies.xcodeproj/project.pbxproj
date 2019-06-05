@@ -911,7 +911,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Launch Image";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MM4VF9A7LR;
-				INFOPLIST_FILE = "/Users/vitormaura/Desktop/Best Movies/Best Movies TV/Resource/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Best Movies TV/Resource/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -933,7 +933,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Launch Image";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MM4VF9A7LR;
-				INFOPLIST_FILE = "/Users/vitormaura/Desktop/Best Movies/Best Movies TV/Resource/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Best Movies TV/Resource/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
