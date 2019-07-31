@@ -38,14 +38,14 @@ extension FavoriteMovieTableViewCell {
         self.labelTitle.text = viewData.titleMovie
         self.labelDate.text = viewData.releaseDate
         self.textDescription.text = viewData.description
-        self.downloadImage(viewData.urlImage, viewData.titleMovie, UIImageView())
+        self.downloadImage(viewData.urlImage, viewData.titleMovie)
     }
     
-    private func downloadImage(_ url: String, _ name: String, _ imageView: UIImageView){
+    private func downloadImage(_ url: String, _ name: String){
         self.startLoading()
         if let url:URL = URL(string: url){
             let resource = ImageResource(downloadURL: url, cacheKey: name)
-            imageView.kf.setImage(with: resource, options: nil, completionHandler: { (image, _, _, _) in
+            UIImageView().kf.setImage(with: resource, options: nil, completionHandler: { (image, _, _, _) in
                 DispatchQueue.main.async(execute: {
                     self.stopLoading()
                     if let imageResult = image {
@@ -62,10 +62,8 @@ extension FavoriteMovieTableViewCell {
     }
     
     private func getImageDefault() -> UIImage{
-        if let image = UIImage(named: "errorImage"){
-            return image
-        }
-        return UIImage()
+        guard let image = UIImage(named: "errorImage") else { return UIImage() }
+        return image
     }
     
     func startLoading(){

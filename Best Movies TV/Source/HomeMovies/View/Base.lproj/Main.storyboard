@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="14460.31" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="appleTV" orientation="landscape">
-        <adaptation id="light"/>
-    </device>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="14854.2" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="appleTV" appearance="dark"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <deployment identifier="tvOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14806.4"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -108,7 +107,6 @@
                                 </connections>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="WxF-hR-HT2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QJF-P7-4Qo"/>
                             <constraint firstAttribute="trailing" secondItem="qoX-Gj-QqG" secondAttribute="trailing" id="QP5-pZ-7XQ"/>
@@ -141,7 +139,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sjo-qT-0wB">
-                                <rect key="frame" x="110" y="68" width="354" height="532"/>
+                                <rect key="frame" x="106" y="68" width="354" height="532"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="354" id="5kK-sI-3m5"/>
                                     <constraint firstAttribute="height" constant="532" id="BxA-tP-9Lg"/>
@@ -162,15 +160,14 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="S0u-MP-fpo">
-                                <rect key="frame" x="493" y="494" width="811" height="526"/>
+                                <rect key="frame" x="489" y="494" width="811" height="526"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut </string>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="36"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NOME DO FILME" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YJA-O1-fwj">
-                                <rect key="frame" x="518" y="380" width="843" height="48"/>
+                                <rect key="frame" x="514" y="380" width="843" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="843" id="mzK-9B-Ie9"/>
                                 </constraints>
@@ -178,12 +175,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VmB-LP-nFV">
-                                <rect key="frame" x="110" y="664" width="112" height="48"/>
+                                <rect key="frame" x="106" y="664" width="112" height="48"/>
                                 <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="40"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Lorem ipsum dolor sit er elit lamet" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W85-aW-L54">
-                                <rect key="frame" x="110" y="727" width="354" height="113"/>
+                                <rect key="frame" x="106" y="727" width="354" height="113"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="354" id="etG-Bd-Dnx"/>
                                 </constraints>
@@ -191,7 +188,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7.9" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awV-pk-O9k">
-                                <rect key="frame" x="1530" y="68" width="226" height="174"/>
+                                <rect key="frame" x="1526" y="68" width="234" height="174"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="174" id="CtO-8Z-YL7"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="154" id="SK8-O0-M8g"/>
@@ -200,12 +197,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17/02/1994" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5yy-F0-SxF">
-                                <rect key="frame" x="520" y="450" width="398" height="36"/>
+                                <rect key="frame" x="516" y="450" width="398" height="36"/>
                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="30"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hvp-ZS-xM1" customClass="LOTAnimationView">
-                                <rect key="frame" x="110" y="235" width="354" height="199"/>
+                                <rect key="frame" x="106" y="234.5" width="354" height="199"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="354" id="4v6-XK-etQ"/>
                                     <constraint firstAttribute="height" constant="199" id="gUO-ET-7sh"/>
@@ -216,7 +213,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="awV-pk-O9k" firstAttribute="trailing" secondItem="Kkl-Iu-T70" secondAttribute="trailingMargin" constant="-54" id="1Ay-6K-4fO"/>
                             <constraint firstItem="S0u-MP-fpo" firstAttribute="leading" secondItem="sjo-qT-0wB" secondAttribute="trailing" constant="29" id="2V2-Cr-eZV"/>
@@ -257,7 +253,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YYP-Cr-5KE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2597" y="106"/>
+            <point key="canvasLocation" x="2870" y="77"/>
         </scene>
     </scenes>
 </document>

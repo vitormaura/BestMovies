@@ -15,7 +15,6 @@ protocol FavoriteMovieDelegate: NSObjectProtocol{
 }
 
 //MARK: - FAVORITEMOVIVIEWDATA -
-
 struct ListFavoriteMoviesViewData {
     var listFavorites = [FavoriteMovieViewData]()
 }
@@ -34,7 +33,7 @@ struct FavoriteMovieViewData {
 
 class FavoritesMoviesPresenter {
     
-    private weak var delegate:FavoriteMovieDelegate!
+    private weak var delegate:FavoriteMovieDelegate?
     private let dataBase:FavoriteManager!
     private lazy var viewData = ListFavoriteMoviesViewData()
     
@@ -53,9 +52,9 @@ extension FavoritesMoviesPresenter{
             for dataBaseRow in listDataBase{
                 self.parseFavoriteModelFromViewData(model: dataBaseRow, listViewData: &self.viewData.listFavorites)
             }
-            self.delegate.setFavoriteMovies(viewData: self.viewData)
+            self.delegate?.setFavoriteMovies(viewData: self.viewData)
         }else{
-            self.delegate.showEmpty()
+            self.delegate?.showEmpty()
         }
     }
     

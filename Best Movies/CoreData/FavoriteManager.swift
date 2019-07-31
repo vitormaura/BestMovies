@@ -23,16 +23,13 @@ extension FavoriteManager{
     }
     
     func removeFavoriteDataBase(model:FavoriteModel){
-        if let favoriteResult = self.getFavorite(title: model.titleMovie ?? ""){
-            self.removeFavoriteDataBase(favoriteResult)
-        }
+        guard let favoriteResult = self.getFavorite(title: model.titleMovie ?? "") else { return }
+        self.removeFavoriteDataBase(favoriteResult)
     }
     
     func fetchFavoriteDataBase(title: String) -> FavoriteModel?{
-        if let favoriteDataBase = self.getFavorite(title: title){
-            return self.parseFavoriteDataBaseFromModel(dataBase: favoriteDataBase)
-        }
-        return nil
+        guard let favoriteDataBase = self.getFavorite(title: title) else { return nil }
+        return self.parseFavoriteDataBaseFromModel(dataBase: favoriteDataBase)
     }
     
     func fetchListFavoriteDataBase() -> [FavoriteModel]?{

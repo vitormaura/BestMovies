@@ -57,16 +57,14 @@ extension MoviesTVDescriptionViewController: MoviesTVDescriptionDelegate{
     }
     
     func setImageDefault(_ imageView: UIImageView, _ nameDefault:String) {
-        if let image = UIImage(named: nameDefault){
-            imageView.image = image
-        }
+        guard let image = UIImage(named: nameDefault) else { return }
+        imageView.image = image
     }
     
     func setImage(_ imageView: UIImageView, _ image: UIImage) {
         imageView.image = image
-        if self.imageCover.image == image{
-           self.getColors(image: image)
-        }
+        guard self.imageCover.image == image else { return }
+        self.getColors(image: image)
     }
 }
 

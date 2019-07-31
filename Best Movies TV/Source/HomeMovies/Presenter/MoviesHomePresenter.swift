@@ -52,7 +52,7 @@ struct GenresViewData {
 class MoviesHomePresenter {
     
     private let service:MoviesService!
-    private weak var delegate:HomeMovieDelegate!
+    private weak var delegate:HomeMovieDelegate?
     private lazy var viewData = HomeMovieViewData()
     private lazy var genresViewData = MoviesGenresViewData()
     
@@ -66,38 +66,34 @@ class MoviesHomePresenter {
 //MARK: - SERVICE -
 extension MoviesHomePresenter{
     func getMovies(page: Int){
-        self.delegate.startLoading()
-        if !Reachability.isConnectedToNetwork() {
-            self.delegate.errorConnection()
+        self.delegate?.startLoading()
+        guard Reachability.isConnectedToNetwork() else {
+            self.delegate?.errorConnection()
             return
         }
         self.service.getMovies(page: page, completionSuccess: { (movies) in
-            DispatchQueue.main.asyncAfter(deadline: .now() + 5.0, execute: {
-                UIView.animate(withDuration: 0.5, animations: {
-                    if let moviesList = movies.results {
-                        self.parseModelToViewData(moviesList)
-                        self.viewData.totalMovies = movies.total_results ?? 0
-                        self.delegate.setMovie(self.viewData)
-                        self.delegate.stopLoading()
-                    }
-                })
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3.5, execute: {
+                guard let moviesList = movies.results else { return }
+                self.parseModelToViewData(moviesList)
+                self.viewData.totalMovies = movies.total_results ?? 0
+                self.delegate?.setMovie(self.viewData)
+                self.delegate?.stopLoading()
             })
-        }) { (error) in
+        }) { (_) in
             DispatchQueue.main.async{
-                self.delegate.errorGeneric()
+                self.delegate?.errorGeneric()
             }
         }
     }
     
     func getMoviesForInfiniteScroll(page: Int){
-        self.delegate.startLoadingInfiniteScroll()
+        self.delegate?.startLoadingInfiniteScroll()
         self.service.getMovies(page: page, completionSuccess: { (movies) in
             DispatchQueue.main.async{
-                if let moviesList = movies.results {
-                    self.parseModelToViewData(moviesList)
-                    self.delegate.setMovie(self.viewData)
-                    self.delegate.stopLoadingInfiniteScroll()
-                }
+                guard let moviesList = movies.results else { return }
+                self.parseModelToViewData(moviesList)
+                self.delegate?.setMovie(self.viewData)
+                self.delegate?.stopLoadingInfiniteScroll()
             }
         }) { (_) in
             
@@ -107,13 +103,12 @@ extension MoviesHomePresenter{
     func getGenres() {
         self.service.getGenres(completionSuccess: { (genres) in
             DispatchQueue.main.async {
-                if let genreList = genres.genres {
-                    self.parseModelToViewData(genreList)
-                    self.delegate.setGenre(self.genresViewData)
-                }
+                guard let genreList = genres.genres else { return }
+                self.parseModelToViewData(genreList)
+                self.delegate?.setGenre(self.genresViewData)
             }
-        }) { (error) in
-            print("error")
+        }) { (_) in
+            
         }
     }
 }

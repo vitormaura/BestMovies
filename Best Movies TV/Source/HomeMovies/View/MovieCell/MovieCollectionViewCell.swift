@@ -17,37 +17,43 @@ class MovieCollectionViewCell: UICollectionViewCell {
     
 }
 
+//MARK: - OVERRIDE METHODS -
+extension MovieCollectionViewCell {
+    override func prepareForReuse() {
+        self.movieImage.image = nil
+        self.movieImage.kf.cancelDownloadTask()
+    }
+}
+
 //MARK: - AUX METHODS -
 extension MovieCollectionViewCell {
     func prepare(viewData: MovieViewData){
-        self.downloadImage(viewData.urlImage, viewData.titleMovie, self.movieImage)
+        self.downloadImage(viewData.urlImage, viewData.titleMovie)
     }
     
-    private func downloadImage(_ url: String, _ name: String, _ imageView: UIImageView){
+    private func downloadImage(_ url: String, _ name: String) {
         self.startLoading()
         if let url:URL = URL(string: url){
             let resource = ImageResource(downloadURL: url, cacheKey: name)
-            imageView.kf.setImage(with: resource, options: nil, completionHandler: { (image, _, _, _) in
+            UIImageView().kf.setImage(with: resource, options: nil, completionHandler: { (image, _, _, _) in
                 DispatchQueue.main.async(execute: {
                     self.stopLoading()
                     if let imageResult = image {
-                        imageView.image = imageResult
+                        self.movieImage.image = imageResult
                     }else {
-                        imageView.image = self.getImageDefault()
+                        self.movieImage.image = self.getImageDefault()
                     }
                 })
             })
         }else{
             self.stopLoading()
-            imageView.image = self.getImageDefault()
+            self.movieImage.image = self.getImageDefault()
         }
     }
     
     private func getImageDefault() -> UIImage{
-        if let image = UIImage(named: "errorImage"){
-            return image
-        }
-        return UIImage()
+        guard let image = UIImage(named: "errorImage") else { return UIImage() }
+        return image
     }
     
     private func startLoading(){

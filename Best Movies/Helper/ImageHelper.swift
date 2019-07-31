@@ -9,8 +9,8 @@
 import UIKit
 
 class ImageHelper {
-    class func addNavBarImage(_ navController: UINavigationController, _ imageName: String) -> UIView{
-        let navController = navController
+    class func addNavBarImage(_ navController: UINavigationController?, _ imageName: String) -> UIView{
+        guard let navController = navController else { return UIView() }
         let image = UIImage(named: imageName)
         let imageView = UIImageView(image: image)
         let bannerWidth = navController.navigationBar.frame.size.width

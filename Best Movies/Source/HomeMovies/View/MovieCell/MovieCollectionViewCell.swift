@@ -34,15 +34,15 @@ extension MovieCollectionViewCell {
 extension MovieCollectionViewCell {
     func prepare(viewData: MovieViewData){
         self.labelTitleMovie.text = viewData.titleMovie
-        self.downloadImage(viewData.urlImage, viewData.titleMovie, self.imageMovie)
+        self.downloadImage(viewData.urlImage, viewData.titleMovie)
         self.setFavorite(title: viewData.titleMovie)
     }
     
-    private func downloadImage(_ url: String, _ name: String, _ imageView: UIImageView){
+    private func downloadImage(_ url: String, _ name: String) {
         self.startLoading()
         if let url:URL = URL(string: url){
             let resource = ImageResource(downloadURL: url, cacheKey: name)
-            imageView.kf.setImage(with: resource, options: nil, completionHandler: { (image, _, _, _) in
+            UIImageView().kf.setImage(with: resource, options: nil, completionHandler: { (image, _, _, _) in
                 DispatchQueue.main.async(execute: {
                     self.stopLoading()
                     if let imageResult = image {
@@ -59,10 +59,8 @@ extension MovieCollectionViewCell {
     }
     
     private func getImageDefault() -> UIImage{
-        if let image = UIImage(named: "errorImage"){
-            return image
-        }
-        return UIImage()
+        guard let image = UIImage(named: "errorImage") else { return UIImage() }
+        return image
     }
     
     func startLoading(){
@@ -79,9 +77,8 @@ extension MovieCollectionViewCell {
     
     func setFavorite(title: String) {
         self.favoriteView.setAnimation(named: "favourite_app_icon")
-        if self.dataBase.checkFavoriteDataBase(title: title) {
-            self.favoriteView.play()
-        }
+        guard self.dataBase.checkFavoriteDataBase(title: title) else { return }
+        self.favoriteView.play()
     }
 }
 
