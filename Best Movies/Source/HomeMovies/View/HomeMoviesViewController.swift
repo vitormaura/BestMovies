@@ -38,16 +38,17 @@ extension HomeMoviesViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.moviesCollectionView.reloadData()
+        self.setupNavBar()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        self.navigationController?.navigationBar.insertSubview(ImageHelper.addNavBarImage(navigationController!, "logo"), at: 1)
+        self.setupNavBar()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.navigationController?.navigationBar.subviews[1].removeFromSuperview()
+        self.removeLogo()
     }
 }
 
@@ -77,10 +78,11 @@ extension HomeMoviesViewController: UICollectionViewDelegateFlowLayout{
 //MARK: - COLLECTIONVIEW DELEGATE -
 extension HomeMoviesViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        if indexPath.row == self.viewData.movieList.count - 10, !self.isLoading, self.viewData.movieList.count != self.viewData.totalMovies {
-            self.currentPage += 1
-            self.presenter.getMoviesForInfiniteScroll(page: currentPage)
-        }
+        guard indexPath.row == self.viewData.movieList.count - 10,
+              !self.isLoading, self.viewData.movieList.count !=
+              self.viewData.totalMovies else { return }
+        self.currentPage += 1
+        self.presenter.getMoviesForInfiniteScroll(page: currentPage)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -170,9 +172,38 @@ extension HomeMoviesViewController {
     }
     
     @objc func reload(){
-        if !self.isLoading{
-            HapticAlerts.hapticReturnLight()
-           self.presenter.getMovies(page: currentPage)
-        }
+        guard !self.isLoading else { return }
+        HapticAlerts.hapticReturnLight()
+        self.presenter.getMovies(page: currentPage)
+    }
+    
+    func addLogo() {
+        let imageLogo = ImageHelper.addNavBarImage(self.navigationController, "logo")
+        self.navigationController?.navigationBar.addSubview(imageLogo)
+    }
+    
+    func removeLogo() {
+        self.navigationController?.navigationBar.subviews.forEach({ (view) in
+            guard view is UIImageView else { return }
+            view.removeFromSuperview()
+        })
+    }
+    
+    func setupNavBar() {
+        let purpleColor = UIColor(red: 146/255, green: 0/255, blue: 255/255, alpha: 1.0)
+        self.navigationController?.navigationBar.barTintColor = nil
+        self.navigationController?.navigationBar.layer.shadowColor = purpleColor.cgColor
+        self.navBarAppearence()
+        self.addLogo()
+    }
+    
+    func navBarAppearence() {
+        guard #available(iOS 13.0, *) else { return }
+        let navBarAppearance = UINavigationBarAppearance()
+        navBarAppearance.configureWithDefaultBackground()
+        navBarAppearance.backgroundColor = UIColor.systemBackground
+        navBarAppearance.largeTitleTextAttributes =  [NSAttributedString.Key.font: UIFont(name: "BebasKai", size: 27.0)!, NSAttributedString.Key.foregroundColor : UIColor(red: 146/255, green: 0/255, blue: 255/255, alpha: 1.0)]
+        self.navigationController?.navigationBar.standardAppearance = navBarAppearance
+        self.navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
     }
 }

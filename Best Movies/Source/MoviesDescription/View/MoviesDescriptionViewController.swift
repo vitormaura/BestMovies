@@ -12,6 +12,8 @@ import Lottie
 class MoviesDescriptionViewController: UIViewController {
     
     //MARK: - OUTLETS -
+    @IBOutlet weak var bottomView: UIView!
+    @IBOutlet weak var textView: UIView!
     @IBOutlet weak var imagePoster: UIImageView!
     @IBOutlet weak var imageCover: UIImageView!
     @IBOutlet weak var labelDate: UILabel!
@@ -44,7 +46,7 @@ extension MoviesDescriptionViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.navigationBar.subviews[1].removeFromSuperview()
+        self.setColors()
     }
 }
 
@@ -63,13 +65,13 @@ extension MoviesDescriptionViewController: MoviesDescriptionDelegate{
     }
     
     func setImageDefault(_ imageView: UIImageView, _ nameDefault:String) {
-        if let image = UIImage(named: nameDefault){
-            imageView.image = image
-        }
+        guard let image = UIImage(named: nameDefault) else { return }
+        imageView.image = image
     }
     
     func setImage(_ imageView: UIImageView, _ image: UIImage) {
         imageView.image = image
+        self.setColors()
     }
 }
 
@@ -113,9 +115,46 @@ extension MoviesDescriptionViewController {
         }
     }
     
-    func setFavoriteIcon(){
-        if self.presenter.checkFavovite(title: viewData.titleMovie){
-            self.favoriteView.play()
+    func setFavoriteIcon() {
+        guard self.presenter.checkFavovite(title: viewData.titleMovie) else { return }
+        self.favoriteView.play()
+    }
+    
+    func setColors() {
+        guard let image = self.imagePoster.image else { return }
+        self.getColors(image: image)
+    }
+    
+    func getColors(image: UIImage) {
+        image.getColors { (colors) in
+            UIView.animate(withDuration: 0.4, animations: {
+                self.view.backgroundColor = colors.background
+                self.bottomView.backgroundColor = colors.background
+                self.textView.backgroundColor = colors.background
+                self.navigationController?.navigationBar.barTintColor = colors.background
+                self.navigationController?.navigationBar.tintColor = colors.secondary
+                self.navigationController?.navigationBar.shadowColor = colors.secondary
+                self.navBarAppearence(colors)
+                self.setLabelColors(colors)
+            })
         }
+    }
+    
+    func setLabelColors(_ colors: UIImageColors) {
+        self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "BebasKai", size: 27.0)!, NSAttributedString.Key.foregroundColor : colors.detail]
+        self.labelNote.textColor = colors.secondary
+        self.labelDate.textColor = colors.primary
+        self.labelGen.textColor = colors.primary
+        self.textDescription.textColor = colors.primary
+    }
+    
+    func navBarAppearence(_ colors: UIImageColors) {
+        guard #available(iOS 13.0, *) else { return }
+        let navBarAppearance = UINavigationBarAppearance()
+         navBarAppearance.largeTitleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "BebasKai", size: 27.0)!, NSAttributedString.Key.foregroundColor : colors.detail]
+        navBarAppearance.configureWithTransparentBackground()
+        navBarAppearance.backgroundColor = colors.background
+        self.navigationController?.navigationBar.standardAppearance = navBarAppearance
+        self.navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
     }
 }
