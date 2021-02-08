@@ -15,11 +15,11 @@
 
 ### Sobre o projeto
 
-**O Brasileirão** foi construído sobre uma arquitetura MVP. Api themoviedb e para persistência de dados o coredata. 
+**Best Movies** foi construído sobre uma arquitetura MVP. Api themoviedb e para persistência de dados o coredata. 
 
 ### Melhorias:
 - Aplicação de CI e CD definindo um pipeline,
-- Implementar teste unitários.
+- Implementar testes unitários.
 
 ### Créditos:
 
